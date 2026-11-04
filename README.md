@@ -4,13 +4,11 @@
 
 给一个科学原理，产出一条**图准、字对、声音清楚**的讲解视频。
 
-```bash
-python scripts/estimate_cost.py plan.json    # 先看要花多少钱
-python scripts/run_episode.py plan.json      # 一键出片
-```
-
-**看效果**：[`examples/pipe-valve/out/sample-episode.mp4`](examples/pipe-valve/out/sample-episode.mp4)
+ 
+**看效果**：[`examples/heart-ai/heart-ai-route.mp4`](./examples/heart-ai/heart-ai-route.mp4)
 （28 秒竖屏成片，3 拍里只有 1 拍用了 AI 视频）
+
+![](./examples/heart-ai/preview-late.png)
 
 ---
 
@@ -435,3 +433,5 @@ stem-explainer-video/
 ## License
 
 MIT
+
+致谢： https://linux.do 社区
