@@ -8,11 +8,15 @@
 **看效果**：[`examples/heart-ai/heart-ai-route.mp4`](./examples/heart-ai/heart-ai-route.mp4)
 （28 秒竖屏成片，3 拍里只有 1 拍用了 AI 视频）
 
- 
 
 B站视频： 
 
 https://www.bilibili.com/video/BV1mWxX6ZEHX/?vd_source=86926e418c83af75f6850b5546388a79
+
+
+安装：直接复制本 项目链接给你的AI则可以， 装 https://apiz.ai 的 apiz-cli 作为生图生视频的后端。
+
+
 
 ---
 
