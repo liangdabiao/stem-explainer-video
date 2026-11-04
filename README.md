@@ -10,6 +10,9 @@
 
 ![](./examples/heart-ai/preview-late.png)
 
+B站视频： https://www.bilibili.com/video/BV1qfxS6TEev/?vd_source=86926e418c83af75f6850b5546388a79
+
+
 ---
 
 ## 这个 skill 解决什么问题
