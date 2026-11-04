@@ -1,0 +1,50 @@
+{
+  "id": "plasmid-map",
+  "name": "质粒图/分子结构图",
+  "keywords": ["质粒", "plasmid", "分子结构", "vector", "载体", "cloning", "克隆载体", "质粒图谱", "restriction map"],
+  "trigger_phrases": ["质粒", "plasmid map", "载体图", "分子结构图", "质粒图谱"],
+  "prompt_template": {
+    "type": "plasmid map diagram",
+    "subject": "{plasmid_description}",
+    "layout": "circular plasmid map with features as arcs on the ring",
+    "style": "standard circular plasmid map with color-coded feature arcs",
+    "color_scheme": "ORF features blue #2563eb, promoters green #10b981, restriction sites red #ef4444, selection markers orange #f59e0b",
+    "labels": "feature names in bold, sizes in bp, restriction enzyme names in italic",
+    "quality": "4K, publication-ready plasmid map"
+  },
+  "defaults": {
+    "layout": "circular plasmid map",
+    "style": "standard circular map with feature arcs",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "circular": {
+      "description": "环形质粒图标准风格",
+      "overrides": { "layout": "circular plasmid with features as colored arcs, restriction sites as radial ticks" }
+    },
+    "linear": {
+      "description": "线性载体图风格",
+      "overrides": { "layout": "linear vector map with features as colored boxes along a horizontal line" }
+    },
+    "detailed": {
+      "description": "详细图谱，含序列标注",
+      "overrides": { "style": "detailed plasmid map with restriction site positions, GC content ring, and feature annotations" }
+    },
+    "simplified": {
+      "description": "简化示意图，教学用",
+      "overrides": { "style": "simplified plasmid schematic for teaching with only key features labeled" }
+    }
+  },
+  "category_tips": {
+    "biology": "必需元件：复制起点 ori、筛选标记（AmpR/KanR）、多克隆位点 MCS、启动子；大小标 bp",
+    "medicine": "基因治疗载体标 ITR/ITR、包装信号、目的基因；血清型标注",
+    "chemistry": "分子结构图标键角键长；手性中心标 R/S；立体化学用楔形键"
+  },
+  "examples": [
+    "Circular plasmid map of pBR322, 4361 bp. Features as colored arcs: AmpR (ampicillin resistance, blue #2563eb), TetR (tetracycline resistance, orange #f59e0b), ori (origin of replication, green #10b981). Restriction sites as radial ticks: EcoRI, BamHI, HindIII, PstI, SalI with positions in bp. Feature names bold Arial, sizes in bp, enzyme names italic. 4K, publication-ready.",
+    "Linear vector map of pcDNA3.1, left-to-right horizontal. Features as colored boxes: CMV promoter (green), MCS multiple cloning site (blue), BGH polyA (orange), SV40 ori (purple), Neomycin resistance (red). Restriction sites marked above line with positions. Size scale in bp. 4K, textbook style.",
+    "Detailed pUC19 plasmid map, circular. Inner ring: GC content graph. Middle ring: feature arcs (lacZ alpha, AmpR, ori). Outer ring: restriction enzyme positions as radial ticks with bp coordinates. Multiple unique cutters highlighted. 4K, publication-ready."
+  ],
+  "accuracy_tips": "质粒大小标 bp；必需元件齐全（ori/筛选标记/MCS）；限制性内切酶位点位置准确；特征方向标注（正向/反向）；启动子-基因-终止子顺序正确；不虚构酶切位点或元件；元件名称标准化（AmpR, CMV, SV40）。",
+  "supports_image_reference": false
+}

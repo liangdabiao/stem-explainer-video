@@ -1,0 +1,53 @@
+{
+  "id": "machine-mechanism",
+  "name": "机械/工程示意图",
+  "keywords": ["机械", "装置", "爆炸图", "exploded", "工程图", "机械结构", "mechanism", "engineering diagram", "装配图", "mechanical"],
+  "trigger_phrases": ["机械", "装置", "爆炸图", "exploded view", "工程示意图", "机械结构", "装配图"],
+  "prompt_template": {
+    "type": "mechanical engineering diagram",
+    "subject": "{device_description}",
+    "layout": "exploded view or cutaway showing components and assembly relationships",
+    "style": "technical illustration with isometric or orthographic projection",
+    "color_scheme": "metallic grays for parts, accent colors for labels and annotations",
+    "labels": "part numbers in circles, part names in bold, dimensions in regular with mm units",
+    "quality": "4K, engineering-grade technical illustration"
+  },
+  "defaults": {
+    "layout": "isometric exploded view",
+    "style": "technical illustration with assembly lines",
+    "quality": "4K engineering-grade"
+  },
+  "variants": {
+    "exploded": {
+      "description": "爆炸视图，零件分离",
+      "overrides": { "layout": "exploded view with parts separated along assembly axis and dashed assembly lines" }
+    },
+    "cutaway": {
+      "description": "剖视图，内部结构",
+      "overrides": { "layout": "cutaway view revealing internal components and mechanisms" }
+    },
+    "isometric": {
+      "description": "等轴测图，立体感",
+      "overrides": { "layout": "isometric 3D projection showing 3 faces of the assembly" }
+    },
+    "schematic": {
+      "description": "原理示意图，简化",
+      "overrides": { "style": "simplified schematic diagram showing working principle with labeled force/energy arrows" }
+    }
+  },
+  "category_tips": {
+    "biology": "实验装置（离心机/色谱仪）标关键参数；生物反应器标搅拌/通气",
+    "medicine": "医疗器械标人体接触面；手术器械标操作角度；假体标材料",
+    "chemistry": "反应装置标温度/压力；蒸馏塔标塔板；换热器标流体走向",
+    "physics": "实验装置标测量精度；光学系统标光路；真空系统标压力",
+    "engineering": "按 ISO 标准；公差和配合标注；材料标注；BOM 编号",
+    "math": "几何体标尺寸；曲面标曲率；变换矩阵示意"
+  },
+  "examples": [
+    "Exploded view of a ball bearing, isometric projection. Components separated along central axis: outer ring, balls (7), ball cage/retainer, inner ring. Dashed assembly lines connecting parts. Part numbers in circles (1-4), part names bold Arial, dimensions regular with mm units. Metallic gray palette #6b7280 with blue accent #2563eb. 4K, engineering-grade technical illustration.",
+    "Cutaway view of an internal combustion engine, revealing: cylinders, pistons, connecting rods, crankshaft, camshaft, valves, spark plugs. Force arrows showing combustion pressure and piston motion. Part labels with leader lines. Bilingual labels 活塞 (Piston), 曲轴 (Crankshaft). Naturalistic metallic rendering. 4K, textbook style.",
+    "Schematic diagram of a hydraulic press working principle, left-to-right. Small force F1 on small piston A1, pressure P=F1/A1 transmitted through fluid, large force F2=F1*A2/A1 on large piston A2. Labeled force arrows, area dimensions, Pascal's law formula. Simplified clean lines. 4K, physics education style."
+  ],
+  "accuracy_tips": "零件编号和名称标准化；尺寸带 mm 单位；公差符合 ISO 标准；装配关系清晰；不虚构零件或结构；爆炸图沿装配轴分离；力/能量箭头方向正确；剖切面标注。",
+  "supports_image_reference": true
+}

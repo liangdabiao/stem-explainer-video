@@ -1,0 +1,53 @@
+{
+  "id": "timeline",
+  "name": "科学史时间线",
+  "keywords": ["时间线", "历史", "发展历程", "timeline", "science history", "里程碑", "演进", "chronology", "科学史"],
+  "trigger_phrases": ["时间线", "timeline", "发展历程", "科学史", "历史沿革", "里程碑事件"],
+  "prompt_template": {
+    "type": "horizontal timeline infographic",
+    "subject": "{history_topic}",
+    "layout": "horizontal timeline with milestone markers along a central axis",
+    "style": "editorial timeline with event cards alternating above and below axis",
+    "color_scheme": "chronological gradient or era-based color coding",
+    "labels": "year in bold, event title in semibold, description in regular, icons per event",
+    "quality": "4K, publication-ready timeline"
+  },
+  "defaults": {
+    "layout": "horizontal timeline with alternating event cards",
+    "style": "editorial timeline",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "editorial": {
+      "description": "杂志编辑风格，卡片交替",
+      "overrides": { "layout": "horizontal timeline with event cards alternating above/below central axis" }
+    },
+    "vertical": {
+      "description": "垂直时间线，适合长历史",
+      "overrides": { "layout": "vertical timeline top-to-bottom with event cards on right side" }
+    },
+    "winding": {
+      "description": "蜿蜒路径时间线，趣味性",
+      "overrides": { "layout": "winding road timeline with milestones as signposts along curved path" }
+    },
+    "periodic": {
+      "description": "分期色块时间线，按时代分段",
+      "overrides": { "layout": "horizontal axis divided into era color blocks with events within each era" }
+    }
+  },
+  "category_tips": {
+    "biology": "演化时间线用地质年代色块；物种出现标 mya；灭绝事件用红色标记",
+    "medicine": "医学发现时间线标注研究者和国籍；诺贝尔奖年份标记",
+    "chemistry": "元素发现时间线按周期表位置着色；诺贝尔化学奖标记",
+    "physics": "物理学里程碑按经典/近代/现代分期；公式标注关键事件",
+    "engineering": "技术演进按工业革命分期；专利年份标注",
+    "math": "数学定理按古代/中世纪/近代分期；数学家肖像图标"
+  },
+  "examples": [
+    "Horizontal timeline of DNA discovery, central axis with 6 milestones: (1869) Miescher isolates DNA, (1953) Watson & Crick double helix, (1977) Sanger sequencing, (1990) Human Genome Project starts, (2003) HGP completion, (2020) CRISPR therapeutics. Event cards alternating above/below axis, year in bold, event title semibold, description regular, icon per event (microscope, helix, sequencer). Chronological gradient blue #3b82f6 to green #10b981. 4K, editorial style.",
+    "Vertical timeline of artificial intelligence history, top-to-bottom. 8 milestones from (1950) Turing Test to (2024) Large Language Models. Event cards on right side with year, title, description, and researcher portrait icon. Era color blocks: Symbolic AI blue, Connectionism green, Deep Learning purple, LLM era orange. Bilingual labels 深度学习 (Deep Learning). 4K.",
+    "Winding road timeline of space exploration, curved path from (1957) Sputnik to (2024) Mars missions. Milestones as signposts along the path with rocket icons. Space-themed palette black background with white text and accent colors per decade. 4K, popular science style."
+  ],
+  "accuracy_tips": "年份和历史事件准确无误；研究者姓名和国籍正确；不虚构历史事件或人物；关键里程碑按时间顺序排列；时代分期标注清晰；中文译名采用通用译法。",
+  "supports_image_reference": false
+}

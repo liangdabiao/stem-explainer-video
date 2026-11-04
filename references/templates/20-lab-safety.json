@@ -1,0 +1,53 @@
+{
+  "id": "lab-safety",
+  "name": "实验室安全/操作规范",
+  "keywords": ["实验室安全", "操作规范", "lab safety", "biosafety", "biosecurity", "实验室规程", "PPE", "应急处理", "safety protocol"],
+  "trigger_phrases": ["实验室安全", "操作规范", "lab safety", "PPE", "应急处理", "安全规程"],
+  "prompt_template": {
+    "type": "lab safety infographic",
+    "subject": "{safety_topic}",
+    "layout": "iconographic poster with PPE icons, hazard symbols, and step-by-step procedures",
+    "style": "safety poster with high-contrast hazard colors and ISO 7010 safety symbols",
+    "color_scheme": "warning yellow #eab308, danger red #dc2626, safe green #16a34a, mandatory blue #2563eb, neutral gray #6b7280",
+    "labels": "ISO 7010 pictograms, short imperative instructions in bold uppercase, hazard descriptions in regular",
+    "quality": "4K, lab-grade safety infographic"
+  },
+  "defaults": {
+    "layout": "iconographic poster with PPE and hazard sections",
+    "style": "safety poster with ISO 7010 symbols",
+    "quality": "4K lab-grade"
+  },
+  "variants": {
+    "bsl": {
+      "description": "生物安全等级（Biosaety Level）风格",
+      "overrides": { "layout": "BSL-1/2/3/4 comparison with required PPE and facility features" }
+    },
+    "ppe": {
+      "description": "PPE 着装流程图",
+      "overrides": { "layout": "PPE donning (putting on) and doffing (taking off) sequence with step-by-step icons" }
+    },
+    "chemical": {
+      "description": "化学品安全（GHS）风格",
+      "overrides": { "style": "chemical safety poster with GHS hazard pictograms and compatibility chart" }
+    },
+    "emergency": {
+      "description": "应急响应流程图",
+      "overrides": { "layout": "emergency response flowchart: spill/exposure/fire with decision tree to appropriate action" }
+    }
+  },
+  "category_tips": {
+    "biology": "BSL 等级标生物危害；转基因生物标 GMO 标识；动物实验标 IACUC；人源样本标 IRB",
+    "medicine": "临床环境标患者安全；药物标 GHS 分类；辐射标 IAEA 符号；感染标 PPE 等级",
+    "chemistry": "GHS 象形图（骷髅/火焰/腐蚀/环境）；不相容化学品矩阵；通风橱使用规程",
+    "physics": "激光安全等级（1-4）；辐射剂量标 SI 单位；高压电标 IEC 符号；真空系统标破爆风险",
+    "engineering": "机械安全标 EN ISO 13849；电气安全标 IEC 60364；高空作业标 ANSI Z359；化学品标 NFPA 704",
+    "math": "数据安全标 ISO 27001；计算资源标访问控制；模型卡标伦理审查"
+  },
+  "examples": [
+    "Lab safety poster for BSL-2 lab, BSL comparison layout. 4 panels for BSL-1, BSL-2, BSL-3, BSL-4 with increasing hazard levels. Each panel: required PPE icons (lab coat, gloves, eye protection, respirator, full suit), facility features (BSL cabinet, negative pressure, HEPA filter), example agents. ISO 7010 biohazard symbol. Color-coded by level: green, blue, yellow, red. 4K, lab-grade safety poster.",
+    "PPE donning sequence poster, top-to-bottom 6 steps with figures: (1) Hand washing, (2) Don gown, (3) Don mask/respirator, (4) Don eye protection, (5) Don gloves (over gown cuff), (6) Final check. Each step with figure icon and short imperative instruction. Mandatory blue #2563eb for required PPE, safe green #16a34a for completed steps. 4K.",
+    "Chemical safety GHS poster, 9 GHS pictograms in 3x3 grid: explosive, flammable, oxidizer, gas under pressure, corrosive, toxic, harmful, health hazard, environment. Each pictogram with name and description. Compatibility chart below showing green/yellow/red matrix for common chemical pairs. 4K."
+  ],
+  "accuracy_tips": "使用 ISO 7010 标准安全符号；GHS 象形图标准正确；PPE 等级与 BSL 等级匹配；不虚构安全规程；应急流程符合机构 SOP；危险等级标 NFPA 704 菱形；高压/辐射/化学品标国际标准符号。",
+  "supports_image_reference": false
+}

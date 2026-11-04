@@ -1,0 +1,51 @@
+{
+  "id": "experimental-workflow",
+  "name": "实验流程/技术路线图",
+  "keywords": ["实验流程", "技术路线", "workflow", "实验步骤", "protocol", "experimental design", "方法流程", "实验设计", "procedure"],
+  "trigger_phrases": ["实验流程", "技术路线", "workflow diagram", "experimental protocol", "方法流程图", "实验步骤"],
+  "prompt_template": {
+    "type": "experimental workflow diagram",
+    "subject": "{workflow_description}",
+    "layout": "left-to-right horizontal flow with numbered sequential steps",
+    "style": "clean flowchart with rounded rectangle nodes and directional arrows",
+    "color_scheme": "step nodes in distinct hues, arrows in dark gray #374151",
+    "labels": "step numbers in circles, method names in bold, parameters in italic",
+    "quality": "4K, publication-ready, clean flowchart style"
+  },
+  "defaults": {
+    "layout": "left-to-right horizontal flow",
+    "style": "clean flowchart with rounded rectangles",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "academic": {
+      "description": "期刊方法图风格，简洁线条",
+      "overrides": { "style": "minimal flowchart with thin lines and monochrome accents", "color_scheme": "grayscale with single accent color #2563eb" }
+    },
+    "textbook": {
+      "description": "教材风格，带步骤说明",
+      "overrides": { "style": "textbook flowchart with descriptive callout boxes under each step", "color_scheme": "soft pastel steps with dark text" }
+    },
+    "infographic": {
+      "description": "科普信息图风格，图标化步骤",
+      "overrides": { "style": "infographic with icon for each step, numbered badges, connecting dotted line" }
+    },
+    "detailed": {
+      "description": "详细工艺流程，含参数标注",
+      "overrides": { "style": "detailed process flow with parameter annotations (temperature, time, concentration) on arrows" }
+    }
+  },
+  "category_tips": {
+    "biology": "样本类型注明（细胞系/组织/模式生物）；关键试剂标浓度和时间；离心步骤标转速和温度",
+    "medicine": "临床样本注明入组标准；伦理审批编号占位；盲法标注",
+    "chemistry": "反应条件标温度/压力/催化剂；产率标在产物箭头；TLC/GC-MS 检测点标注",
+    "physics": "仪器型号占位；测量精度标注；控制变量列出"
+  },
+  "examples": [
+    "Experimental workflow diagram, left-to-right horizontal flow with 5 numbered steps: (1) Cell culture seeding 1x10^6 cells/mL in 6-well plate, (2) Serum starvation 24h, (3) Drug treatment with 10uM compound for 48h, (4) RNA extraction with TRIzol, (5) qRT-PCR analysis. Rounded rectangle nodes with step numbers in circles, method names in bold Arial, parameters in italic. Arrows dark gray #374151. White background. 4K, publication-ready clean flowchart.",
+    "Western blot experimental protocol flowchart, vertical top-to-bottom layout: protein extraction → BCA quantification → SDS-PAGE electrophoresis (30ug load) → transfer to PVDF → blocking 5% BSA 1h → primary antibody overnight 4C → HRP-conjugated secondary 1h → ECL detection. Each step in rounded rectangle with parameter annotations on arrows. Grayscale with blue accent #2563eb. 4K, journal methods figure style.",
+    "CRISPR-Cas9 gene knockout workflow infographic, 6 steps with icons: gRNA design → plasmid construction → lentivirus packaging → transduction → puromycin selection → validation by sequencing. Icon-based steps, numbered badges, connecting dotted line. Bilingual labels 敲除验证 (Knockout Validation). Vibrant educational palette. 4K."
+  ],
+  "accuracy_tips": "步骤必须按时间顺序编号；关键参数（浓度/时间/温度）标在箭头或节点旁；不虚构实验数据或结果；样本量 n 值注明；统计方法在最后一步标注；对照 组（control）必须显示；方向明确（left-to-right 或 top-to-bottom）。",
+  "supports_image_reference": false
+}

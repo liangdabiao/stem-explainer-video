@@ -1,0 +1,50 @@
+{
+  "id": "cell-structure",
+  "name": "细胞/解剖结构图",
+  "keywords": ["细胞结构", "cell structure", "解剖图", "器官", "organelle", "anatomy", "细胞器", "组织结构", "histology", "解剖", "超微结构", "cellular", "tissue", "organ", "embryology", "胚胎", "histology", "neuron", "神经元"],
+  "trigger_phrases": ["细胞结构", "解剖图", "anatomy diagram", "organelle illustration", "器官结构", "超微结构"],
+  "prompt_template": {
+    "type": "biological structure illustration",
+    "subject": "{structure_description}",
+    "layout": "cross-section view with labeled callouts",
+    "style": "detailed scientific illustration with accurate morphology",
+    "color_scheme": "naturalistic with distinct hues per organelle: nucleus purple #8b5cf6, mitochondria orange #f59e0b, ER teal #14b8a6",
+    "labels": "anatomical terms in bold, latin names in italic parentheses",
+    "quality": "4K, textbook-grade scientific illustration"
+  },
+  "defaults": {
+    "layout": "cross-section with labeled callouts",
+    "style": "detailed scientific illustration",
+    "quality": "4K textbook-grade"
+  },
+  "variants": {
+    "academic": {
+      "description": "学术期刊风格，扁平示意",
+      "overrides": { "style": "flat vector illustration with clean lines and labeled lines pointing to structures" }
+    },
+    "textbook": {
+      "description": "教材风格，自然主义配色",
+      "overrides": { "style": "naturalistic textbook illustration with soft shading and realistic morphology" }
+    },
+    "3d-render": {
+      "description": "3D 渲染风格，立体感",
+      "overrides": { "style": "3D rendered cellular structure with depth, soft shadows, and subsurface scattering" }
+    },
+    "infographic": {
+      "description": "科普信息图风格，图标化",
+      "overrides": { "style": "simplified infographic with icon-like organelles and function callout boxes" }
+    }
+  },
+  "category_tips": {
+    "biology": "细胞器比例相对准确（线粒体比溶酶体大）；双层膜结构（核膜/线粒体）必须显示双层；核糖体标为小点；内质网分粗面/滑面",
+    "medicine": "解剖术语用拉丁名斜体括注，如肝细胞 (Hepatocyte)；病理变化用箭头标注；临床标志用星号",
+    "chemistry": "分子结构图键角和键长符合实际；手性中心标注；电子云用半透明云图"
+  },
+  "examples": [
+    "Detailed animal cell structure illustration, cross-section view. Nucleus (purple #8b5cf6) with nucleolus and nuclear envelope double membrane. Mitochondria (orange #f59e0b) with inner cristae folds. Rough endoplasmic reticulum (teal #14b8a6) studded with ribosomes, smooth ER continuous. Golgi apparatus as stacked cisternae. Lysosomes as small vesicles. Plasma membrane as phospholipid bilayer. Anatomical terms in bold Arial, latin names in italic. Labeled callout lines pointing to each organelle. White background. 4K, textbook-grade scientific illustration.",
+    "Plant cell anatomy diagram, cross-section. Large central vacuole, cell wall outer layer, chloroplasts (green #22c55e) with thylakoid stacks, nucleus, mitochondria, Golgi. Naturalistic textbook style with soft shading. Labels bilingual: 叶绿体 (Chloroplast), 液泡 (Vacuole). 4K resolution.",
+    "Heart anatomy cross-section, 4 chambers labeled: right/left atrium and ventricle. Valves: tricuspid, pulmonary, mitral, aortic. Major vessels: vena cava, pulmonary artery/vein, aorta. Red oxygenated #ef4444, blue deoxygenated #3b82f6 blood flow arrows. Latin names italic: Atrium dextrum, Ventriculus sinister. 3D rendered with depth. 4K, medical textbook illustration."
+  ],
+  "accuracy_tips": "细胞器相对比例准确（核 > 线粒体 > 溶酶体）；双层膜结构必须显示双层（核膜/线粒体/叶绿体）；解剖术语用拉丁名斜体括注；不虚构解剖结构或变异；血管/神经走向符合解剖学；颜色编码一致（红=含氧血，蓝=缺氧血）。",
+  "supports_image_reference": true
+}

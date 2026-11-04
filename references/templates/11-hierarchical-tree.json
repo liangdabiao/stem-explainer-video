@@ -1,0 +1,53 @@
+{
+  "id": "hierarchical-tree",
+  "name": "层级树/分类树",
+  "keywords": ["层级树", "分类树", "hierarchical", "tree", "taxonomy", "系统树", "家谱", "决策树", "phylogenetic", "分类学"],
+  "trigger_phrases": ["层级树", "分类树", "hierarchical tree", "taxonomy", "系统发育树", "决策树", "家谱"],
+  "prompt_template": {
+    "type": "hierarchical tree diagram",
+    "subject": "{hierarchy_topic}",
+    "layout": "top-down tree with root at top and branches expanding downward",
+    "style": "clean dendrogram with rectangular or curved branches",
+    "color_scheme": "root in primary color, branches color-coded by category",
+    "labels": "root and internal nodes in semibold, leaf nodes in regular, taxonomic ranks in italic",
+    "quality": "4K, publication-ready phylogenetic/taxonomic tree"
+  },
+  "defaults": {
+    "layout": "top-down tree",
+    "style": "clean dendrogram with rectangular branches",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "dendrogram": {
+      "description": "系统树风格，矩形分支",
+      "overrides": { "style": "rectangular dendrogram with right-angle branches and bootstrap values" }
+    },
+    "radial": {
+      "description": "辐射树风格，圆形展开",
+      "overrides": { "layout": "radial tree with root at center and branches radiating outward" }
+    },
+    "orgchart": {
+      "description": "组织结构图风格",
+      "overrides": { "layout": "top-down org chart with rectangular nodes and vertical/horizontal connectors" }
+    },
+    "decision": {
+      "description": "决策树风格，含条件",
+      "overrides": { "style": "decision tree with diamond decision nodes, rectangular outcome nodes, and condition labels on edges" }
+    }
+  },
+  "category_tips": {
+    "biology": "分类学按界门纲目科属种；系统发育树标 bootstrap 值；分支长度反映演化距离",
+    "medicine": "疾病分类按 ICD；诊断决策树标敏感度/特异度；家谱标遗传模式",
+    "chemistry": "物质分类按元素/化合物/混合物；有机物按官能团；反应按类型",
+    "physics": "粒子分类按费米子/玻色子；力按四种基本力；波按机械/电磁",
+    "engineering": "系统分解按功能模块；故障树按 FTA；零件按 BOM 层级",
+    "math": "数系分类按自然/整数/有理/实数/复数；几何按欧氏/非欧；分布按离散/连续"
+  },
+  "examples": [
+    "Phylogenetic tree of vertebrates, top-down rectangular dendrogram. Root: Vertebrata 脊椎动物门. Branches: Fish 鱼类, Amphibia 两栖类, Reptilia 爬行类, Aves 鸟类, Mammalia 哺乳类. Bootstrap values at nodes. Branch lengths proportional to evolutionary distance. Root brown #92400e, branches distinct hues. Taxonomic ranks italic. Bilingual labels. 4K, publication-ready.",
+    "Taxonomy hierarchy of Homo sapiens, top-down tree: Domain Eukarya -> Kingdom Animalia -> Phylum Chordata -> Class Mammalia -> Order Primates -> Family Hominidae -> Genus Homo -> Species H. sapiens. Each rank in box, latin names italic, common names bilingual 人类 (Human). Root blue #2563eb. 4K, textbook style.",
+    "Decision tree for medical diagnosis, top-down. Root: Patient symptoms. Decision diamonds: Fever? -> Cough? -> ... Outcome rectangles: Common Cold, Flu, COVID-19, Pneumonia. Condition labels on edges (Yes/No, temperature ranges). Sensitivity/specificity at nodes. Green #10b981 for benign, red #ef4444 for severe outcomes. 4K."
+  ],
+  "accuracy_tips": "分类层级符合学科标准（生物按界门纲目科属种）；分支节点同属一个分类层级；不虚构分类关系；系统发育树标 bootstrap 值；分支长度有依据；拉丁学名斜体；中英文对照准确。",
+  "supports_image_reference": false
+}

@@ -1,0 +1,4 @@
+{"kind": "image", "shot": "heart_main", "beat": null, "fingerprint": "9315b31d34abf50d", "status": "submitted", "price": 23, "ts": "2026-11-04T11:27:16"}
+{"kind": "video", "fingerprint": "9315b31d34abf50d", "task_id": "646e1400-11ee-4e82-b4a9-49a2f2fb7352", "status": "done", "price": 60.0, "out": "D:\\story-skill\\.workbuddy\\skills\\stem-explainer-video\\examples\\heart-ai\\assets\\diagrams\\heart_main.png", "ts": "2026-11-04T11:28:12"}
+{"kind": "video", "shot": "heart_main", "beat": null, "fingerprint": "833fa4d9700799ec", "status": "submitted", "price": 223, "ts": "2026-11-04T11:30:12"}
+{"kind": "video", "fingerprint": "833fa4d9700799ec", "task_id": "f72b950e-7785-4d18-b91f-46ef761f5a31", "status": "done", "price": 223.0, "out": "D:\\story-skill\\.workbuddy\\skills\\stem-explainer-video\\examples\\heart-ai\\assets\\videos\\heart_main.mp4", "ts": "2026-11-04T11:31:19"}

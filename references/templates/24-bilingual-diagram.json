@@ -1,0 +1,52 @@
+{
+  "id": "bilingual-diagram",
+  "name": "中英双语通用图",
+  "keywords": ["双语", "中英对照", "bilingual", "中文英文", "dual language", "双语图", "双语标注", "国际版"],
+  "trigger_phrases": ["双语图", "中英对照", "bilingual", "中文英文", "dual language"],
+  "prompt_template": {
+    "type": "bilingual scientific diagram",
+    "subject": "{topic}",
+    "layout": "standard scientific diagram with all labels in Chinese followed by English in parentheses",
+    "style": "clean scientific illustration with consistent bilingual labeling",
+    "color_scheme": "standard scientific palette with 3-4 hues, consistent across all elements",
+    "labels": "Chinese in SimHei/Microsoft YaHei bold, English in Arial italic in parentheses immediately after",
+    "quality": "4K, international publication-ready bilingual diagram"
+  },
+  "defaults": {
+    "layout": "standard scientific diagram with bilingual labels",
+    "style": "clean scientific illustration with bilingual labels",
+    "quality": "4K international publication-ready"
+  },
+  "variants": {
+    "inline": {
+      "description": "内联式双语，中文主英文括注",
+      "overrides": { "labels": "Chinese main term, English in parentheses, e.g. 线粒体 (Mitochondria)" }
+    },
+    "stacked": {
+      "description": "堆叠式双语，中文上英文下",
+      "overrides": { "labels": "Chinese on top line, English on bottom line, both in same font size" }
+    },
+    "side-by-side": {
+      "description": "并排式双语，左右对照",
+      "overrides": { "layout": "Chinese version on left half, English version on right half, mirrored" }
+    },
+    "flag": {
+      "description": "国旗标识双语，分区显示",
+      "overrides": { "layout": "CN flag icon for Chinese section, EN flag icon for English section, partitioned layout" }
+    }
+  },
+  "category_tips": {
+    "biology": "蛋白名用基因符号（ERK1/2）；物种名用学名斜体；中文用通用译名",
+    "medicine": "解剖术语用拉丁名斜体；药物用通用名（INN）；疾病用 ICD-11 名称",
+    "chemistry": "化合物用 IUPAC 中英对照；反应类型用通用名",
+    "physics": "物理量用国际符号；定律名用中英通用译法",
+    "engineering": "标准用 ISO/GB 对照；术语用中英标准对照"
+  },
+  "examples": [
+    "Bilingual cell biology diagram. Chinese main labels: 细胞膜 (Cell Membrane), 细胞核 (Nucleus), 线粒体 (Mitochondria), 内质网 (Endoplasmic Reticulum), 高尔基体 (Golgi Apparatus), 核糖体 (Ribosome). Chinese in SimHei bold, English in Arial italic in parentheses. White background, accurate organelle morphology. 4K, international textbook style.",
+    "Stacked bilingual anatomy diagram, Chinese on top line and English on bottom line for each label. Heart anatomy: 右心房 Right Atrium, 右心室 Right Ventricle, 左心房 Left Atrium, 左心室 Left Ventricle, 主动脉 Aorta. 4K.",
+    "Side-by-side bilingual poster, Chinese version on left half, English version on right half, mirrored content. Same layout, same data, different language. Title: 蛋白质结构预测 (Protein Structure Prediction). 4K, conference bilingual style."
+  ],
+  "accuracy_tips": "中文术语用通用译法（线粒体/脱氧核糖核酸）；英文术语用学科标准译法（mitochondrion/DNA）；物种用学名斜体（Homo sapiens）；同一定位前后中英一致；中文字体用 SimHei/Microsoft YaHei 避免乱码；中英字号协调。",
+  "supports_image_reference": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "chemistry-structure",
+  "name": "化学结构/反应机理",
+  "keywords": ["化学", "反应", "分子", "chemistry", "reaction", "有机化学", "结构式", "molecular", "化学结构", "反应机理", "synthesis"],
+  "trigger_phrases": ["化学结构", "反应机理", "反应式", "molecular structure", "synthesis route", "有机合成"],
+  "prompt_template": {
+    "type": "chemistry structure diagram",
+    "subject": "{chemistry_topic}",
+    "layout": "linear reaction scheme with reagents above arrows, products after",
+    "style": "standard chemical structure drawing with skeletal formulas and reaction arrows",
+    "color_scheme": "atoms by CPK convention: C black #000000, O red #ef4444, N blue #3b82f6, H white, bonds black",
+    "labels": "reagent names above arrows in regular, conditions in italic below, product yields in bold",
+    "quality": "4K, publication-ready chemistry structure"
+  },
+  "defaults": {
+    "layout": "linear reaction scheme left-to-right",
+    "style": "standard chemical structure with skeletal formulas",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "reaction-scheme": {
+      "description": "反应方程式风格",
+      "overrides": { "layout": "linear reaction scheme with substrates, arrows with reagents/conditions, and products" }
+    },
+    "synthesis-route": {
+      "description": "合成路线图，多步",
+      "overrides": { "layout": "multi-step synthesis route with 3-6 sequential reactions showing intermediates" }
+    },
+    "mechanism": {
+      "description": "机理图，含电子转移",
+      "overrides": { "style": "reaction mechanism with curved arrows showing electron movement and intermediates" }
+    },
+    "spectra": {
+      "description": "谱图风格（NMR/MS/IR）",
+      "overrides": { "style": "spectroscopy plot with labeled peaks and chemical shift axes in ppm" }
+    }
+  },
+  "category_tips": {
+    "biology": "代谢通路标酶催化；生化反应标 Keq 和 ATP 水解；生化分子用结构式",
+    "medicine": "药物结构标药效团；构效关系标 SAR；代谢产物标 CYP 酶",
+    "chemistry": "IUPAC 命名；键角和键长符合实际；手性中心 R/S 标注；立体化学用楔形键；反应条件标温度/压力/催化剂",
+    "physics": "分子光谱标能级跃迁；晶体标晶胞参数；表面标吸附位点",
+    "engineering": "材料结构标键合类型；高分子标聚合度；纳米结构标尺寸",
+    "math": "分子对称性用群论符号；轨道用波函数；拓扑结构用图论"
+  },
+  "examples": [
+    "Organic synthesis route, 4-step linear scheme left-to-right. Step 1: Benzene + CH3Cl/AlCl3 -> Toluene (Friedel-Crafts alkylation). Step 2: Toluene + KMnO4 -> Benzoic acid. Step 3: Benzoic acid + SOCl2 -> Benzoyl chloride. Step 4: Benzoyl chloride + CH3OH/pyridine -> Methyl benzoate (85% yield). Reagent names above arrows, conditions italic below (temperature, time). Skeletal formulas, CPK atom colors. 4K, publication-ready.",
+    "SN2 reaction mechanism with electron movement. Substrate CH3Br on left, hydroxide HO- approaching backside, transition state in middle with dashed partial bonds, methanol CH3OH product on right. Curved arrows showing electron pair movement from HO- to C and from C-Br bond to Br-. Intermediate carbocation NOT shown (SN1 vs SN2 distinction). 4K, textbook style.",
+    "1H NMR spectrum of ethanol. x-axis 0-10 ppm, y-axis intensity. Three peaks: triplet at 1.2 ppm (3H, CH3), quartet at 3.7 ppm (2H, CH2), singlet at 2.5 ppm (1H, OH). TMS reference at 0 ppm. Peak assignments and integration curves. Spectrum on white background with black peaks. 4K, organic chemistry textbook style."
+  ],
+  "accuracy_tips": "结构式键角键长符合实际；CPK 配色（C 黑 O 红 N 蓝）；反应箭头标条件和收率；机理箭头方向正确（电子从富到缺）；手性中心 R/S 标注；不虚构反应或产物；NMR 化学位移范围合理（0-12 ppm）；立体化学用楔形/虚线键。",
+  "supports_image_reference": false
+}

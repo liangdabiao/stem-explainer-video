@@ -1,0 +1,39 @@
+{
+  "title": "示例：一根水管里的科学",
+  "lang": "zh",
+  "style": "stem",
+  "width": 720,
+  "height": 1280,
+  "fps": 30,
+  "ratio": "9:16",
+  "resolution": "480p",
+  "theme": {
+    "bg": "#FFFFFF",
+    "ink": "#171714",
+    "accent": "#2563eb",
+    "warn": "#ef4444",
+    "muted": "#6b7280"
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "narration": "示例旁白。",
+      "narration_audio": "audio/narration/s01.mp3",
+      "motion_video": "assets/videos/s01.mp4",
+      "still_image": null,
+      "duration_sec": 7,
+      "caption": "示例字幕",
+      "term": "示例术语",
+      "term_def": "示例释义",
+      "annotations": [],
+      "motion": {
+        "type": "ai",
+        "zoomTo": null,
+        "highlight": null
+      },
+      "image_width": null,
+      "image_height": null,
+      "takeaway": null
+    }
+  ]
+}

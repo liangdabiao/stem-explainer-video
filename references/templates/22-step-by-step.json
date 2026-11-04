@@ -1,0 +1,52 @@
+{
+  "id": "step-by-step",
+  "name": "步骤说明图（实验操作）",
+  "keywords": ["步骤", "操作", "step by step", "PCR", "western blot", "实验操作", "操作流程", "procedure", "tutorial", "protocol steps"],
+  "trigger_phrases": ["步骤图", "操作步骤", "step by step", "实验操作", "protocol 步骤", "tutorial"],
+  "prompt_template": {
+    "type": "step-by-step procedure illustration",
+    "subject": "{procedure_topic}",
+    "layout": "horizontal or vertical sequence of numbered steps with illustration per step",
+    "style": "tutorial illustration with figure per step, large step number badge, and short caption",
+    "color_scheme": "alternating step colors for visual rhythm, blue #2563eb primary, accent #f59e0b",
+    "labels": "step number in large circle, action verb in bold, key parameters in regular, warnings in red",
+    "quality": "4K, tutorial-grade step illustration"
+  },
+  "defaults": {
+    "layout": "horizontal sequence of 4-8 steps",
+    "style": "tutorial illustration with figure per step",
+    "quality": "4K tutorial-grade"
+  },
+  "variants": {
+    "horizontal": {
+      "description": "横向步骤图，左到右",
+      "overrides": { "layout": "horizontal left-to-right sequence with steps along a row" }
+    },
+    "vertical": {
+      "description": "纵向步骤图，上到下",
+      "overrides": { "layout": "vertical top-to-bottom sequence with steps along a column" }
+    },
+    "numbered-grid": {
+      "description": "网格编号图，2x2 或 2x3",
+      "overrides": { "layout": "numbered grid 2x2 or 2x3 with step badges in corners" }
+    },
+    "infographic": {
+      "description": "信息图风格，图标+文字",
+      "overrides": { "style": "infographic with icon per step, large numbers, and key bullet points" }
+    }
+  },
+  "category_tips": {
+    "biology": "PCR 标温度循环次数；WB 标抗体稀释比；细胞传代标汇合度；动物手术标麻醉剂量",
+    "medicine": "手术标关键步骤；注射标部位和剂量；心肺复苏标按压深度和频率",
+    "chemistry": "合成标试剂加入顺序和当量；蒸馏标馏分温度；TLC 标 Rf 值",
+    "physics": "实验标仪器连接顺序；测量标校准步骤；数据分析标公式",
+    "engineering": "装配标扭矩；焊接标温度；编程标代码示例"
+  },
+  "examples": [
+    "PCR step-by-step illustration, horizontal 6-step sequence. Step 1: Prepare reaction mix in tube (template DNA, primers, dNTPs, polymerase). Step 2: Initial denaturation 95C 5min. Step 3: Cycle 30x: denaturation 95C 30s, annealing 55C 30s, extension 72C 1min. Step 4: Final extension 72C 5min. Step 5: Analyze by gel electrophoresis. Step 6: Visualize bands. Each step with illustration of tube/thermal cycler/gel. Step badges in circles. 4K, molecular biology tutorial style.",
+    "Western blot step-by-step, vertical 8-step sequence. Step 1: Sample lysis and protein extraction. Step 2: BCA protein quantification. Step 3: SDS-PAGE gel loading (30ug). Step 4: Electrophoresis 120V 1.5h. Step 5: Transfer to PVDF membrane 100V 1h. Step 6: Blocking 5% BSA 1h. Step 7: Primary antibody overnight 4C, secondary 1h. Step 8: ECL detection. Each step with figure and key parameters. 4K.",
+    "Sanger sequencing procedure, numbered grid 2x3. 6 steps: PCR amplification, cycle sequencing with ddNTPs, capillary electrophoresis, laser detection, base calling, sequence assembly. Each step with figure and brief caption. Blue #2563eb step badges. 4K, genomics tutorial style."
+  ],
+  "accuracy_tips": "步骤顺序符合实际 SOP；关键参数（温度/时间/浓度/体积）准确；不虚构实验步骤；每步配 1 个清晰插图；步骤编号大且醒目；警告/注意事项用红色框标出；常见错误用叉号标出。",
+  "supports_image_reference": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "hub-spoke",
+  "name": "中心辐射图",
+  "keywords": ["中心辐射", "hub and spoke", "辐射图", "知识体系", "mind map", "思维导图", "放射图", "radial", "知识网络"],
+  "trigger_phrases": ["中心辐射", "辐射图", "hub and spoke", "思维导图", "知识体系图", "radial diagram"],
+  "prompt_template": {
+    "type": "hub-and-spoke knowledge diagram",
+    "subject": "{central_topic}",
+    "layout": "central hub with radial spokes to peripheral nodes",
+    "style": "clean radial diagram with central hub and organized peripheral branches",
+    "color_scheme": "central hub in primary color, each spoke branch in distinct hue",
+    "labels": "central topic in large bold, branch topics in semibold, sub-topics in regular",
+    "quality": "4K, publication-ready radial diagram"
+  },
+  "defaults": {
+    "layout": "central hub with radial spokes",
+    "style": "clean radial diagram",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "clean": {
+      "description": "简洁辐射风格，线条清晰",
+      "overrides": { "style": "minimal radial diagram with thin lines and clean nodes" }
+    },
+    "mindmap": {
+      "description": "思维导图风格，分支展开",
+      "overrides": { "style": "mind map with curved organic branches and varying node sizes" }
+    },
+    "infographic": {
+      "description": "信息图风格，图标节点",
+      "overrides": { "style": "infographic with icon-based nodes and colored connection lines" }
+    },
+    "concentric": {
+      "description": "同心圆层级风格",
+      "overrides": { "layout": "concentric circles with central core, inner ring, outer ring" }
+    }
+  },
+  "category_tips": {
+    "biology": "中心概念为系统/过程；分支为组件/阶段；用图标表示生物实体",
+    "medicine": "中心为疾病/治疗；分支为病因/症状/诊断/治疗；用色块表示严重度",
+    "chemistry": "中心为元素/反应；分支为性质/应用/化合物；用结构式图标",
+    "physics": "中心为定律/概念；分支为公式/应用/实验；用矢量图标",
+    "engineering": "中心为系统/产品；分支为模块/功能/接口；用流程图标",
+    "math": "中心为定理/概念；分支为推论/应用/证明；用公式图标"
+  },
+  "examples": [
+    "Hub-and-spoke knowledge diagram of the cell, central hub: 细胞 (Cell) in large bold. 6 radial spokes to: (1) Nucleus 细胞核 with icon, (2) Mitochondria 线粒体, (3) ER 内质网, (4) Golgi 高尔基体, (5) Membrane 细胞膜, (6) Ribosome 核糖体. Central hub purple #8b5cf6, each spoke distinct hue. Branch topics semibold, sub-topics regular. 4K, clean radial diagram.",
+    "Mind map of machine learning, central node: Machine Learning. 4 curved organic branches: Supervised Learning (blue), Unsupervised Learning (green), Reinforcement Learning (orange), Deep Learning (purple). Each branch with sub-nodes: Supervised -> Classification, Regression; Unsupervised -> Clustering, PCA; etc. Varying node sizes by importance. 4K.",
+    "Concentric circles diagram of ecological hierarchy, central core: Organism 个体. Inner ring: Population 种群, Community 群落. Outer ring: Ecosystem 生态系统, Biosphere 生物圈. Each ring distinct color. Labels bilingual. 4K, education style."
+  ],
+  "accuracy_tips": "中心概念与分支层级关系准确；分支属于同一抽象层级；不遗漏核心子主题；分支数 4-8 个为宜；中英文术语对照；图标与节点语义一致。",
+  "supports_image_reference": false
+}

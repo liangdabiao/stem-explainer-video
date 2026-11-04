@@ -1,0 +1,11 @@
+node_modules/
+out/
+build/
+storyboard.json
+public/audio/narration/*.mp3
+public/assets/videos/*.mp4
+public/assets/videos/fitted/
+public/assets/diagrams/*.png
+!public/audio/narration/.gitkeep
+!public/assets/videos/.gitkeep
+!public/assets/diagrams/.gitkeep

@@ -1,0 +1,53 @@
+{
+  "id": "data-infographic",
+  "name": "数据可视化信息图",
+  "keywords": ["数据信息图", "data infographic", "统计图", "可视化", "data visualization", "图表信息图", "数据故事", "data story"],
+  "trigger_phrases": ["数据信息图", "data infographic", "数据可视化", "data visualization", "统计信息图"],
+  "prompt_template": {
+    "type": "data visualization infographic",
+    "subject": "{data_topic}",
+    "layout": "modular grid with hero statistic, supporting charts, and narrative flow",
+    "style": "editorial infographic with cohesive color story",
+    "color_scheme": "sequential palette anchored on {primary_color}, with accent highlight",
+    "labels": "big numbers in bold sans-serif, units in smaller weight, source line at bottom",
+    "quality": "4K, editorial-grade infographic, publication-ready"
+  },
+  "defaults": {
+    "layout": "modular bento grid",
+    "style": "editorial infographic",
+    "quality": "4K editorial-grade"
+  },
+  "variants": {
+    "editorial": {
+      "description": "新闻编辑风格，杂志感",
+      "overrides": { "style": "editorial magazine infographic with serif headlines and sans-serif data labels" }
+    },
+    "dashboard": {
+      "description": "仪表盘风格，KPI 卡片",
+      "overrides": { "layout": "dashboard with KPI cards, trend lines, and donut charts", "style": "business analytics dashboard" }
+    },
+    "academic": {
+      "description": "学术海报风格，严谨",
+      "overrides": { "style": "academic conference poster with figure captions and methodology notes" }
+    },
+    "education": {
+      "description": "科普教育风格，图标化",
+      "overrides": { "style": "educational infographic with icons, simple analogies, and step-by-step narrative" }
+    }
+  },
+  "category_tips": {
+    "biology": "物种/基因数据用分类色；进化树用分支色；序列数据用 ATCG 四色编码",
+    "medicine": "流行病学数据用序数色（低到高）；置信区间显示；样本量标注",
+    "chemistry": "光谱图标注峰位和官能团；反应能耗用能级图；元素用周期表色",
+    "physics": "物理量标单位和量级；矢量场用箭头密度；相图标注相界",
+    "engineering": "性能指标用雷达图；流程用 Sankey；故障用 FMEA 矩阵",
+    "math": "函数图标注定义域；几何图标注角度和边长；概率图标注期望和方差"
+  },
+  "examples": [
+    "Data visualization infographic on global climate trends, bento grid layout: hero statistic '+1.2C global temperature rise since 1880' in large bold sans-serif, supporting line chart of CO2 ppm over decades, world map with regional temperature anomalies as sequential red palette, donut chart of greenhouse gas composition. Editorial magazine style. Cohesive warm palette anchored on #dc2626 with #fbbf24 accent. Source line: NASA GISS, 2024. 4K, publication-ready.",
+    "Educational infographic on the water cycle, modular layout with 4 stages: evaporation, condensation, precipitation, collection. Each stage as icon with bilingual label 蒸发 (Evaporation). Narrative flow left-to-right with curved arrows. Blue palette #3b82f6 to #06b6d4. Simple analogies and step descriptions. 4K, education-grade.",
+    "Business analytics dashboard infographic, KPI cards showing revenue $2.4M (+15% YoY), trend line of monthly sales, donut chart of market share by region, bar chart of top 5 products. Grayscale #f3f4f6 background with blue accent #2563eb. Sans-serif data labels. 4K, dashboard style."
+  ],
+  "accuracy_tips": "仅用于概念性/示意性数据可视化，不虚构真实实验数据；数据来源在底部标注；坐标轴标单位和量级；颜色用 hex 码；分类数据用分类色，序数数据用序数色；大数据用统计图，小数据用图标重复法；中文字笔画放大 200% 核对。",
+  "supports_image_reference": false
+}

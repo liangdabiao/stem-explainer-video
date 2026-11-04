@@ -1,0 +1,53 @@
+{
+  "id": "math-concept",
+  "name": "数学概念可视化",
+  "keywords": ["数学", "几何", "函数", "math", "mathematics", "概念可视化", "拓扑", "calculus", "algebra", "概率"],
+  "trigger_phrases": ["数学概念", "几何示意", "函数图", "math diagram", "概念可视化", "math visualization"],
+  "prompt_template": {
+    "type": "math concept visualization",
+    "subject": "{math_topic}",
+    "layout": "coordinate system with labeled curves, regions, and annotations",
+    "style": "clean mathematical diagram with axes, grids, and labeled entities",
+    "color_scheme": "axes and grid in gray #6b7280, curves in primary blue #2563eb, highlighted regions in semi-transparent fill",
+    "labels": "variables in italic, values on axes, formulas with LaTeX-style formatting, points labeled with coordinates",
+    "quality": "4K, publication-ready math visualization"
+  },
+  "defaults": {
+    "layout": "coordinate system with labeled curves",
+    "style": "clean mathematical diagram",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "function-plot": {
+      "description": "函数图风格，曲线标注",
+      "overrides": { "layout": "2D Cartesian plot with x-y axes, function curves, and key points marked" }
+    },
+    "geometry": {
+      "description": "几何图风格，标注尺寸",
+      "overrides": { "layout": "geometric figure with labeled sides, angles, and points" }
+    },
+    "topology": {
+      "description": "拓扑图风格，网络结构",
+      "overrides": { "layout": "topological diagram with nodes, edges, and genus/manifold structure" }
+    },
+    "probability": {
+      "description": "概率图风格，分布曲线",
+      "overrides": { "style": "probability distribution plot with density curve, mean/median/quantile markers, and shaded regions" }
+    }
+  },
+  "category_tips": {
+    "biology": "种群动态用 Logistic 方程；流行病学用 SIR 模型；神经活动用微分方程",
+    "medicine": "药代动力学用浓度时间曲线；流行病学用 R0 标度；剂量反应曲线",
+    "chemistry": "反应动力学用 Arrhenius 曲线；相图用 P-T 图；能级图用薛定谔解",
+    "physics": "相空间用 Poincaré 截面；场论用费曼图；统计力学用配分函数曲线",
+    "engineering": "控制理论用 Bode 图；信号处理用傅里叶变换；优化用收敛曲线",
+    "math": "按数学分支：分析（极限/导数/积分）、几何（欧氏/非欧/拓扑）、代数（群/环/域）、概率（分布/随机过程/统计）"
+  },
+  "examples": [
+    "Function plot of sine and cosine, Cartesian coordinate system from -2pi to 2pi on x-axis, -1.5 to 1.5 on y-axis. Two curves: sin(x) blue #2563eb, cos(x) red #ef4444, period 2pi. Key points marked at 0, pi/2, pi, 3pi/2, 2pi with y-values. Grid lines light gray. Axes labels x and y in italic. Formula y=sin(x) and y=cos(x) as legend. 4K, publication-ready.",
+    "Geometry diagram of inscribed angle theorem. Circle with center O, points A, B, C on circumference. Central angle AOB marked at center, inscribed angle ACB marked at circumference subtending same arc AB. Angle measurements shown with arc. Theorem statement: inscribed angle = half of central angle. Bilingual labels 圆心角 (Central Angle), 圆周角 (Inscribed Angle). 4K.",
+    "Probability density plot of normal distribution N(mu=0, sigma=1). x-axis -4 to 4, y-axis 0 to 0.5. Bell curve in blue #2563eb. Mean at 0 with vertical dashed line. Standard deviation bands at ±1, ±2, ±3 shaded with decreasing opacity. 68-95-99.7 rule annotation. Formula f(x) = 1/(sigma*sqrt(2pi)) * exp(-(x-mu)^2/(2sigma^2)). 4K, statistics textbook style."
+  ],
+  "accuracy_tips": "坐标轴标签和单位准确；变量用斜体（x, y, theta）；公式用 LaTeX 排版或等效；曲线和点位置准确；几何定理标注重复；不虚构数学关系；分布参数标注；关键点坐标标注。",
+  "supports_image_reference": false
+}

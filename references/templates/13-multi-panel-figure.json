@@ -1,0 +1,53 @@
+{
+  "id": "multi-panel-figure",
+  "name": "多子图组合（Figure 1A-F）",
+  "keywords": ["多子图", "multi-panel", "figure 1", "组合图", "子图", "panel", "A-F", "复合图", "论文 figure"],
+  "trigger_phrases": ["多子图", "multi-panel", "figure 1", "组合图", "论文图", "panel A B C"],
+  "prompt_template": {
+    "type": "multi-panel scientific figure",
+    "subject": "{figure_topic}",
+    "layout": "grid of 2-6 labeled sub-panels (A, B, C, D) with shared title",
+    "style": "cohesive multi-panel figure with consistent styling across panels",
+    "color_scheme": "unified palette across all panels, consistent accent color",
+    "labels": "panel labels A/B/C/D in bold uppercase at top-left of each panel, shared scale bars",
+    "quality": "4K, publication-ready composite figure"
+  },
+  "defaults": {
+    "layout": "2x2 grid of 4 panels",
+    "style": "cohesive multi-panel",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "grid": {
+      "description": "网格布局，等大子图",
+      "overrides": { "layout": "2x2 or 2x3 grid with equal-sized panels" }
+    },
+    "asymmetric": {
+      "description": "非对称布局，主次分明",
+      "overrides": { "layout": "asymmetric layout with one large hero panel and smaller supporting panels" }
+    },
+    "flow": {
+      "description": "流程式布局，左到右",
+      "overrides": { "layout": "left-to-right horizontal flow of panels showing progressive stages" }
+    },
+    "stacked": {
+      "description": "堆叠布局，上下排列",
+      "overrides": { "layout": "vertical stack of panels sharing a common x-axis" }
+    }
+  },
+  "category_tips": {
+    "biology": "A: 实验流程图, B: 代表性图像(WB/IF), C: 统计图, D: 机制图；共享 n 值和统计标记",
+    "medicine": "A: 临床流程(CONSORT), B: 患者基线表, C: 主要终点 Kaplan-Meier, D: 安全性",
+    "chemistry": "A: 合成路线, B: NMR 谱图, C: MS 谱图, D: 晶体结构；共享化合物编号",
+    "physics": "A: 实验装置, B: 原始数据, C: 拟合曲线, D: 残差分析；共享单位",
+    "engineering": "A: 系统架构, B: 原型照片, C: 性能曲线, D: 对比表；共享指标",
+    "math": "A: 问题定义, B: 几何示意, C: 迭代收敛, D: 误差分析；共享公式编号"
+  },
+  "examples": [
+    "Multi-panel scientific figure, 2x2 grid. Panel A (top-left): experimental workflow flowchart. Panel B (top-right): representative Western blot image placeholder with molecular weight markers. Panel C (bottom-left): bar chart of quantification with error bars and significance markers */**. Panel D (bottom-right): mechanism diagram showing drug target interaction. Panel labels A/B/C/D in bold uppercase at top-left of each panel. Unified palette blue #2563eb and gray #6b7280 across all panels. Shared scale bar. 4K, publication-ready.",
+    "Multi-panel figure for physics experiment, asymmetric layout. Large hero panel A (left): experimental apparatus diagram with labeled components. Smaller panels: B (top-right): raw signal vs time, C (middle-right): FFT spectrum, D (bottom-right): fitted curve with residuals. Panel labels A-D bold. Shared x-axis label (Frequency, Hz). 4K.",
+    "Multi-panel chemistry figure, left-to-right horizontal flow. Panel A: synthesis route with reagents and conditions on arrows. Panel B: 1H NMR spectrum with peak assignments. Panel C: 13C NMR spectrum. Panel D: HRMS spectrum. Panel E: ORTEP crystal structure drawing. Panel labels A-E bold uppercase. Unified grayscale with blue accent. 4K, journal style."
+  ],
+  "accuracy_tips": "子图标签 A/B/C/D 加粗置于左上角；子图间风格统一（字体/线宽/配色）；共享坐标轴和比例尺；不虚构实验数据图像；统计标记一致（*/**/***对应 p<0.05/0.01/0.001）；分子量标记/单位一致；化合物编号跨子图一致。",
+  "supports_image_reference": false
+}

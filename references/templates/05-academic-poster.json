@@ -1,0 +1,53 @@
+{
+  "id": "academic-poster",
+  "name": "双语学术海报",
+  "keywords": ["学术海报", "poster", "会议海报", "conference poster", "研究海报", "科研海报", "academic poster", "双语海报"],
+  "trigger_phrases": ["学术海报", "会议海报", "conference poster", "科研海报", "学术 poster"],
+  "prompt_template": {
+    "type": "academic conference poster",
+    "subject": "{research_topic}",
+    "layout": "vertical 2:3 poster with header, introduction, methods, results, conclusion sections in IMRaD structure",
+    "style": "clean academic poster with section dividers and figure placeholders",
+    "color_scheme": "institutional palette with primary #1e40af and neutral grays",
+    "labels": "section headers in bold uppercase, figure captions in italic, bilingual title",
+    "quality": "4K, A0/A1 print-ready, academic conference standard"
+  },
+  "defaults": {
+    "layout": "vertical 2:3 IMRaD structure",
+    "style": "clean academic poster",
+    "quality": "4K print-ready"
+  },
+  "variants": {
+    "academic": {
+      "description": "传统学术海报，IMRaD 严谨分区",
+      "overrides": { "layout": "vertical IMRaD with header, 4-column body, references footer" }
+    },
+    "modern": {
+      "description": "现代扁平海报，视觉化",
+      "overrides": { "style": "modern flat poster with large hero figure, infographic-style results, minimal text" }
+    },
+    "bilingual": {
+      "description": "中英双语海报，双栏对照",
+      "overrides": { "layout": "bilingual dual-column poster with Chinese left, English right" }
+    },
+    "visual": {
+      "description": "图多文少海报，视觉主导",
+      "overrides": { "style": "figure-dominant poster with 70% visuals and minimal text callouts" }
+    }
+  },
+  "category_tips": {
+    "biology": "结果区放代表性图（WB/IF/统计图占位）；方法区放流程图；n 值和统计标注",
+    "medicine": "临床研究标伦理审批号占位；CONSORT 流程图；患者基线表占位",
+    "chemistry": "合成路线图占位；NMR/MS 谱图占位；产率表格",
+    "physics": "实验装置图占位；数据拟合曲线；误差棒标注",
+    "engineering": "系统架构图占位；性能对比表；基准测试结果",
+    "math": "定理证明框架；关键引理框；公式排版用 LaTeX 风格"
+  },
+  "examples": [
+    "Academic conference poster, vertical 2:3 layout, A0 print-ready. Header with bilingual title: 基于深度学习的蛋白质结构预测 (Deep Learning-Based Protein Structure Prediction), authors and affiliations. Body in 4 columns: Introduction (背景与意义), Methods (方法 - network architecture diagram), Results (结果 - 3 figure placeholders with captions), Conclusion (结论与展望). Section headers bold uppercase, figure captions italic. Primary color #1e40af with neutral grays. Clean academic style. 4K.",
+    "Modern flat academic poster, figure-dominant. Large hero figure at top showing mechanism diagram. Three infographic-style result panels with big numbers and icons. Minimal text callouts. Bilingual labels throughout. Vibrant but professional palette #0891b2 / #f59e0b. 4K, conference poster.",
+    "Bilingual dual-column academic poster, Chinese left column and English right column mirroring content. IMRaD structure. Header with bilingual title. Methods flowchart, results with figure placeholders, conclusion summary box. Institutional palette #1e40af. A1 print-ready. 4K."
+  ],
+  "accuracy_tips": "IMRaD 结构完整（Introduction/Methods/Results/Conclusion）；双语标题中英文一致；图表占位框带 caption；不虚构实验数据或结果；伦理审批/基金号用占位符 [IRB No. XXX]；统计显著性用 */**/***；作者机构用占位符。",
+  "supports_image_reference": false
+}

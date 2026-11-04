@@ -1,0 +1,52 @@
+{
+  "id": "educational-poster",
+  "name": "教学海报（K-12/高校）",
+  "keywords": ["教学海报", "educational poster", "课堂海报", "学校海报", "classroom poster", "教育海报", "科学海报"],
+  "trigger_phrases": ["教学海报", "课堂海报", "学校海报", "educational poster", "classroom poster"],
+  "prompt_template": {
+    "type": "educational classroom poster",
+    "subject": "{topic}",
+    "layout": "vertical 2:3 classroom poster with title, key concept, visual explanation, and fun fact",
+    "style": "engaging classroom poster with friendly illustrations and clear explanations",
+    "color_scheme": "vibrant educational palette with 4-6 hues for visual interest",
+    "labels": "title in large bold display font, body text in readable sans-serif, fun fact in callout box",
+    "quality": "4K, classroom print-ready"
+  },
+  "defaults": {
+    "layout": "vertical 2:3 classroom poster",
+    "style": "engaging classroom illustration",
+    "quality": "4K classroom print-ready"
+  },
+  "variants": {
+    "k12": {
+      "description": "K-12 少儿风格，卡通活泼",
+      "overrides": { "style": "cartoon classroom poster with friendly characters and playful illustrations for K-12 students" }
+    },
+    "high-school": {
+      "description": "高中风格，半卡通半专业",
+      "overrides": { "style": "high school poster with semi-realistic illustrations and age-appropriate vocabulary" }
+    },
+    "university": {
+      "description": "大学风格，专业严谨",
+      "overrides": { "style": "university classroom poster with precise terminology and academic illustrations" }
+    },
+    "popular-science": {
+      "description": "科普风格，杂志感",
+      "overrides": { "style": "popular science magazine poster with dramatic visuals and engaging narrative" }
+    }
+  },
+  "category_tips": {
+    "biology": "用类比（细胞=工厂，DNA=蓝图）；生命周期用循环图；物种用真实照片或写实插画",
+    "medicine": "身体部位用简化示意；常见病用症状清单；急救用步骤图标",
+    "chemistry": "元素用周期表色块；分子用积木比喻；反应前后对比",
+    "physics": "定律用日常现象（重力=苹果落地）；矢量用箭头；能量用流动条",
+    "engineering": "原理用爆炸图；历史用时间线；应用用真实案例"
+  },
+  "examples": [
+    "Classroom poster on the water cycle for K-12, vertical 2:3. Title at top: 'The Water Cycle 水循环'. Center illustration: cartoon Earth with sun, ocean, clouds, mountains. 4 stages with icons: Evaporation (sun heating ocean), Condensation (cloud forming), Precipitation (rain falling), Collection (water gathering). Friendly cartoon characters observing. Fun fact box: 'Did you know? A water molecule has been cycling for billions of years!' Vibrant palette blue #3b82f6, yellow #eab308, green #10b981. 4K, K-12 classroom style.",
+    "University poster on quantum mechanics, vertical 2:3. Title: 'Quantum Mechanics 量子力学'. Key concepts: Wave-particle duality, Heisenberg uncertainty, Quantum entanglement. Visual explanations: double-slit experiment diagram, wave function plot, EPR paradox schematic. Equations in LaTeX style. Bilingual labels. University textbook illustration style. 4K.",
+    "High school poster on climate change, vertical 2:3. Title: 'Climate Change 气候变化'. Visual sections: greenhouse effect diagram, CO2 emissions trend, impacts (sea level, temperature), solutions (renewable energy). Cartoon illustrations with semi-realistic elements. Vibrant but factual palette. 4K."
+  ],
+  "accuracy_tips": "科普内容无基本科学错误；术语与目标学段匹配；类比恰当不误导；中英对照术语准确；引用真实数据时标来源；视觉吸引力强但不过度娱乐化；适合目标学段认知水平。",
+  "supports_image_reference": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "cross-section",
+  "name": "截面/剖视图",
+  "keywords": ["截面", "剖视", "cross-section", "切面", "剖面", "剖面图", "内部结构", "internal structure", "解剖面"],
+  "trigger_phrases": ["截面", "剖视", "cross-section", "剖面图", "切面图", "内部结构"],
+  "prompt_template": {
+    "type": "cross-section diagram",
+    "subject": "{object_description}",
+    "layout": "cutaway cross-section revealing internal layered structure",
+    "style": "detailed cutaway illustration with layered annotation",
+    "color_scheme": "distinct hues per layer with gradient depth, earth tones for geological",
+    "labels": "layer names in bold, depths/measurements in regular, leader lines pointing to layers",
+    "quality": "4K, textbook-grade cross-section illustration"
+  },
+  "defaults": {
+    "layout": "cutaway cross-section",
+    "style": "detailed cutaway with layered annotation",
+    "quality": "4K textbook-grade"
+  },
+  "variants": {
+    "academic": {
+      "description": "学术风格，线稿标注",
+      "overrides": { "style": "line-drawing cross-section with leader lines and hatched layer patterns" }
+    },
+    "textbook": {
+      "description": "教材风格，自然主义",
+      "overrides": { "style": "naturalistic textbook cutaway with realistic textures and colors" }
+    },
+    "3d-render": {
+      "description": "3D 渲染风格，立体剖切",
+      "overrides": { "style": "3D rendered cutaway with realistic materials, lighting, and depth" }
+    },
+    "infographic": {
+      "description": "信息图风格，简化色块",
+      "overrides": { "style": "simplified infographic cross-section with bold color blocks and minimal texture" }
+    }
+  },
+  "category_tips": {
+    "biology": "器官截面按解剖学切面（冠状/矢状/横切）；分层标注组织类型；血管神经走向准确",
+    "medicine": "病理截面标注病变区域；正常 vs 病变对比；临床分期标注",
+    "chemistry": "分子截面显示电子云；晶体结构显示晶格；催化剂截面显示活性位点",
+    "physics": "装置截面显示内部组件；电磁场分布用矢量；能级用阶梯",
+    "engineering": "零件截面显示公差和配合；材料层显示复合材料铺层；流道显示流体方向",
+    "math": "几何体截面显示截面形状；曲面截面显示曲率；拓扑截面显示亏格"
+  },
+  "examples": [
+    "Earth cross-section diagram, cutaway revealing 4 layers: crust (thin brown #92400e, 5-70km), mantle (orange-red #ea580c, 2900km), outer core (yellow #eab308 liquid), inner core (red #dc2626 solid). Layer names bold Arial, depths in regular weight with km units, leader lines pointing to each layer. Naturalistic textbook style. 4K.",
+    "Human heart cross-section, frontal plane cutaway. 4 chambers: right/left atrium and ventricle. Septum between sides. Valves: tricuspid, pulmonary, mitral, aortic. Major vessels: vena cava, pulmonary artery/vein, aorta. Wall thickness accurate (left ventricle thickest). Red #ef4444 oxygenated, blue #3b82f6 deoxygenated blood. Latin names italic. 3D rendered cutaway. 4K, medical textbook.",
+    "Volcano cross-section infographic, cutaway showing: magma chamber at bottom, conduit rising up, vent at top, lava flow on surface, ash cloud above. Side layers: bedrock, sedimentary rock. Simplified color blocks with minimal texture. Bilingual labels 岩浆房 (Magma Chamber). 4K, education style."
+  ],
+  "accuracy_tips": "分层厚度/深度比例准确；切面方向标注（冠状/矢状/横切）；层名用标准术语；不虚构内部结构；深度/厚度带单位；剖切线清晰；标注引线不交叉。",
+  "supports_image_reference": true
+}

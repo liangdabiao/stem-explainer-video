@@ -1,0 +1,53 @@
+{
+  "id": "graphical-abstract",
+  "name": "论文图文摘要（Graphical Abstract）",
+  "keywords": ["图文摘要", "graphical abstract", "论文摘要", "论文封面图", "图摘", "abstract figure", "TOC figure"],
+  "trigger_phrases": ["图文摘要", "graphical abstract", "论文摘要图", "TOC figure", "摘要图"],
+  "prompt_template": {
+    "type": "graphical abstract",
+    "subject": "{research_highlight}",
+    "layout": "single horizontal banner with question, method, result, and conclusion flow",
+    "style": "concise scientific visual with minimal text and strong visual narrative",
+    "color_scheme": "unified 3-color palette with primary #2563eb, accent #f59e0b, neutral #6b7280",
+    "labels": "minimal text labels, 3-5 key terms in bold, no full sentences",
+    "quality": "4K, journal cover-ready graphical abstract"
+  },
+  "defaults": {
+    "layout": "single horizontal banner left-to-right",
+    "style": "concise scientific visual with minimal text",
+    "quality": "4K journal cover-ready"
+  },
+  "variants": {
+    "linear": {
+      "description": "线性流程风格，问题-方法-结果-结论",
+      "overrides": { "layout": "linear left-to-right: question icon -> method icon -> result icon -> conclusion icon" }
+    },
+    "central": {
+      "description": "中心聚焦风格，结果突出",
+      "overrides": { "layout": "central hero result with surrounding context panels" }
+    },
+    "before-after": {
+      "description": "前后对比风格，改进显著",
+      "overrides": { "layout": "left-right before/after comparison with arrow showing improvement" }
+    },
+    "iconographic": {
+      "description": "图标叙事风格，极简文字",
+      "overrides": { "style": "iconographic narrative with sequence of 4-6 icons telling the story" }
+    }
+  },
+  "category_tips": {
+    "biology": "细胞/分子图标；通路/机制简化；'before vs after treatment'对比",
+    "medicine": "患者图标+治疗+结果；MOA 一句话；'unmet need → solution → outcome'",
+    "chemistry": "分子结构简化；催化循环；'substrate → catalyst → product'",
+    "physics": "装置简化+结果；'input → process → output'；方程一句话",
+    "engineering": "系统框图+性能曲线；'problem → design → result'",
+    "math": "定理/算法可视化；'input → algorithm → output'；关键公式一句话"
+  },
+  "examples": [
+    "Graphical abstract for drug discovery paper, horizontal banner left-to-right. (1) Disease icon with question mark. (2) Target protein structure with binding pocket highlighted. (3) Small molecule ligand with arrow into pocket. (4) Cellular phenotype change (apoptosis icon). (5) Tumor reduction icon. Minimal text: 'Disease', 'Target', 'Compound', 'Mechanism', 'Efficacy'. Unified 3-color palette blue #2563eb, orange #f59e0b, gray #6b7280. 4K, journal cover-ready.",
+    "Graphical abstract for machine learning paper, linear flow. (1) Raw data icon (DNA sequence). (2) Neural network architecture simplified. (3) Feature extraction icon. (4) Prediction result icon. (5) Validation checkmark. Minimal text: 'DNA', 'CNN', 'Features', 'Prediction', 'Validated'. Blue #2563eb primary with green #10b981 for success states. 4K.",
+    "Before-after graphical abstract, horizontal split with arrow. Left side: 'Before' - tumor mass with growth arrow. Right side: 'After treatment' - tumor shrunk with red reduction arrow. Central arrow connecting: drug molecule. Minimal text: 'Before', 'Treatment', 'After'. Red #ef4444 for before, green #10b981 for after. 4K, cancer research style."
+  ],
+  "accuracy_tips": "文字极简（3-5 关键词，无完整句子）；视觉故事清晰；不虚构实验结果；图标与研究内容一致；不重复论文内已有图；保持单一焦点；颜色用 2-3 主色；尺寸严格遵守期刊要求（通常 5x2.5 cm 横向）。",
+  "supports_image_reference": false
+}

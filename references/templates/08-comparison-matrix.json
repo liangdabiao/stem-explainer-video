@@ -1,0 +1,53 @@
+{
+  "id": "comparison-matrix",
+  "name": "对比矩阵",
+  "keywords": ["对比", "矩阵", "比较", "comparison", "matrix", "对照", "差异表", "compare", "比较表"],
+  "trigger_phrases": ["对比", "比较", "comparison", "matrix", "对照表", "差异矩阵"],
+  "prompt_template": {
+    "type": "comparison matrix infographic",
+    "subject": "{comparison_topic}",
+    "layout": "grid matrix with items as rows and attributes as columns, color-coded cells",
+    "style": "clean matrix with check/cross icons and color-coded ratings",
+    "color_scheme": "green #10b981 for yes/advantage, red #ef4444 for no/disadvantage, gray #6b7280 for neutral",
+    "labels": "item names in left column bold, attribute names in header row, cell values with icons",
+    "quality": "4K, publication-ready comparison matrix"
+  },
+  "defaults": {
+    "layout": "grid matrix",
+    "style": "clean matrix with color-coded cells",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "grid": {
+      "description": "网格矩阵风格，行列对照",
+      "overrides": { "layout": "grid matrix with items as rows, attributes as columns" }
+    },
+    "split": {
+      "description": "左右分屏对比，视觉冲击",
+      "overrides": { "layout": "split screen left/right with vertical divider and labels on each side" }
+    },
+    "venn": {
+      "description": "韦恩图风格，交集差异",
+      "overrides": { "layout": "Venn diagram with overlapping circles showing common and unique traits" }
+    },
+    "table": {
+      "description": "表格风格，严谨数据",
+      "overrides": { "layout": "formal comparison table with zebra striping and header row" }
+    }
+  },
+  "category_tips": {
+    "biology": "物种对比按分类学层级；基因组大小用数值；栖息地用图标",
+    "medicine": "药物对比按机制/副作用/适应症；剂量用数值；相互作用用色块",
+    "chemistry": "分子对比按结构/极性/沸点；键长用数值；官能团用结构式",
+    "physics": "粒子对比按质量/电荷/自旋；单位用 SI；衰变类型用图标",
+    "engineering": "材料对比按强度/密度/耐温；数值用 SI；应用场景用图标",
+    "math": "分布对比按均值/方差/定义域；公式用 LaTeX；概率密度用曲线"
+  },
+  "examples": [
+    "Comparison matrix of cell types, grid layout. Rows: Prokaryote, Eukaryote Animal, Eukaryote Plant. Columns: Nucleus, Mitochondria, Cell Wall, Chloroplasts, Size range. Cells color-coded: green #10b981 checkmark for present, red #ef4444 cross for absent. Item names bold in left column, attribute names in header row. Bilingual labels 原核生物 (Prokaryote). White background. 4K, publication-ready.",
+    "Split screen comparison of mitosis vs meiosis, vertical divider. Left side: Mitosis 有丝分裂 with 4 phases (prophase, metaphase, anaphase, telophase), 2 daughter cells, diploid. Right side: Meiosis 减数分裂 with 8 phases, 4 daughter cells, haploid. Color-coded: blue #3b82f6 for mitosis, purple #8b5cf6 for meiosis. Labels on each side. 4K, textbook style.",
+    "Venn diagram comparison of supervised, unsupervised, and reinforcement learning. Three overlapping circles: blue Supervised, green Unsupervised, orange Reinforcement. Intersections labeled with shared traits: Supervised+Unsupervised = labeled/optimized, Supervised+RL = feedback signal, Unsupervised+RL = exploration. Center intersection: all ML. Bilingual labels 监督学习 (Supervised Learning). 4K, education style."
+  ],
+  "accuracy_tips": "对比维度准确对齐；不虚构属性或数值；颜色编码一致（绿=是/优势，红=否/劣势）；数值带单位和量级；中英文术语对照准确；对比项属于同类可比范畴。",
+  "supports_image_reference": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "physics-schematic",
+  "name": "物理原理示意图",
+  "keywords": ["物理", "力学", "电路", "schematic", "光学", "电磁", "热力学", "physics diagram", "物理图", "矢量图"],
+  "trigger_phrases": ["物理示意图", "电路图", "光学示意", "力学图", "电磁图", "physics schematic"],
+  "prompt_template": {
+    "type": "physics schematic diagram",
+    "subject": "{physics_topic}",
+    "layout": "clean schematic with physical entities, vectors, and coordinate axes",
+    "style": "minimal line drawing with labeled vectors and equations",
+    "color_scheme": "vectors red #ef4444 for force, blue #3b82f6 for velocity, green #10b981 for fields",
+    "labels": "physical quantities in italic with SI units, vector arrows with magnitude labels",
+    "quality": "4K, textbook-grade physics schematic"
+  },
+  "defaults": {
+    "layout": "clean schematic with coordinate axes",
+    "style": "minimal line drawing",
+    "quality": "4K textbook-grade"
+  },
+  "variants": {
+    "textbook": {
+      "description": "教材风格，线稿标注",
+      "overrides": { "style": "textbook line drawing with clean vectors and labeled axes" }
+    },
+    "circuit": {
+      "description": "电路图风格，标准符号",
+      "overrides": { "style": "standard circuit schematic with IEC/ANSI symbols for components" }
+    },
+    "optics": {
+      "description": "光学光路图风格",
+      "overrides": { "style": "optical ray diagram with lenses, mirrors, and light rays" }
+    },
+    "field": {
+      "description": "场图风格，矢量场/等势线",
+      "overrides": { "style": "field diagram with vector arrows or equipotential lines and field lines" }
+    }
+  },
+  "category_tips": {
+    "biology": "生物物理标生物结构；力学生物学标细胞受力",
+    "medicine": "医学物理标成像原理（X-ray/MRI/US）；放疗标剂量分布",
+    "chemistry": "物理化学标能级图；电化学标电极；热化学标能量循环",
+    "physics": "力学标受力分析和坐标轴；电磁标场方向和右手定则；光学标光路和折射角；热力学标 P-V 图",
+    "engineering": "工程力学标应力分布；电路标电流方向；控制框图标传递函数",
+    "math": "数学物理标边界条件；微分方程标方向场；概率标分布曲线"
+  },
+  "examples": [
+    "Free body diagram of a block on an inclined plane, angle theta=30 degrees. Block on slope, coordinate axes x (along slope) and y (perpendicular). Vectors: gravity mg downward (red #ef4444), normal force N perpendicular to slope (blue #3b82f6), friction f along slope opposing motion (green #10b981). Angle theta marked with arc. Equation: F_net = mg sin(theta) - f. Textbook line drawing style. 4K.",
+    "Circuit schematic, series RLC circuit. AC voltage source on left, resistor R (zigzag), inductor L (coil), capacitor C (two parallel lines) in series, back to source. Current direction arrow labeled I. Component values: R=100 ohm, L=10mH, C=100uF. Standard ANSI symbols. Black lines on white. 4K, textbook style.",
+    "Optical ray diagram of convex lens image formation. Object (arrow) at 2F left of lens, real inverted image at 2F right of lens. Three principal rays: parallel ray through focal point, chief ray through center, focal ray parallel after lens. Lens drawn as vertical double-arrow. Focal points F and 2F marked on both sides. Optical axis horizontal dashed. 4K, physics textbook."
+  ],
+  "accuracy_tips": "物理量用斜体符号和 SI 单位；矢量箭头标方向和大小；坐标轴标注；角度标注准确；电路符号符合 IEC/ANSI 标准；光路符合几何光学定律；不虚构物理量数值；右手定则方向正确。",
+  "supports_image_reference": false
+}

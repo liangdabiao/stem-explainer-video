@@ -1,0 +1,17 @@
+# stem-explainer-video 的 Python 依赖
+#
+# 实际上**不需要安装任何东西** —— scripts/ 只用 Python 标准库。
+# 本文件用于说明与将来可能的扩展，正式使用可以完全忽略。
+#
+# 检查：python -c "import sys; print(sys.version)"
+
+# --- 系统依赖（不是 pip 包，需单独安装）---
+#
+#   apiz      : apiz.ai CLI，已安装并登录（apiz auth status）
+#   ffmpeg    : 视频合成与质检（ffmpeg -version / ffprobe -version）
+#   node/npm  : >= node 20，Remotion 渲染
+#   chrome    : Remotion 渲染内核，自动探测常见安装路径
+#
+# --- 可选：若要自己用 matplotlib 生成数学/几何底图 ---
+#
+# matplotlib>=3.7

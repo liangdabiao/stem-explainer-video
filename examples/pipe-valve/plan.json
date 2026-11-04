@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "一根水管里的科学",
+    "lang": "zh",
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "ratio": "9:16",
+    "resolution": "480p",
+    "image_model": "openai/gpt-image-2",
+    "video_model": "minimax/h3",
+    "voice": "female-shaonv",
+    "tts_model": "speech-2.8-hd",
+    "tts_speed": 1.1,
+    "theme": {
+      "bg": "#FFFFFF",
+      "ink": "#171714",
+      "accent": "#2563eb",
+      "warn": "#ef4444",
+      "muted": "#6b7280"
+    }
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "duration_sec": 7,
+      "term": "管道",
+      "term_def": "输送流体的通道",
+      "narration": "打开你家卫生间的水龙头，水就顺着管道流出来了。看起来理所当然，但这条管子里藏着一整套工程学问。",
+      "caption": "水龙头一开，水就顺着管道流出来了",
+      "diagram": {
+        "prompt": "Clean flat vector Chinese science textbook diagram, pure white background #FFFFFF, vertical portrait layout. Subject: a HORIZONTAL pipe running left to right, shown as a cut-open cross-section, with blue water filling the lower half of the pipe interior, a red handwheel valve mounted on top of the pipe, and one small red arrow on the water showing flow direction to the right. Style: flat vector textbook illustration, clean crisp thin outlines, no 3D, no photo texture, no gradient. Color scheme: water #2563eb, pipe walls #6b7280, valve and arrows #ef4444, background #FFFFFF. Labels: bold black Chinese labels with thin leader lines placed outside the subject: 管道, 水流, 阀门. Use bold Microsoft YaHei sans-serif. Quality: publication-ready educational schematic, high contrast, all elements crisp. Constraints: the pipe is HORIZONTAL running left to right, the valve is on TOP of the pipe, all labels fully visible and nothing cropped, subject centered in the upper two-thirds with generous empty margin at the bottom, no watermark, no English text, no pinyin, no garbled characters, no extra text beyond the three labels listed.",
+        "model": "openai/gpt-image-2",
+        "ratio": "9:16"
+      },
+      "animation": {
+        "prompt": "The blue water inside the horizontal pipe flows steadily from left to right with smooth continuous motion, the small red flow arrow slides slowly to the right along the flow direction, and the red handwheel valve on top turns a few degrees open. Everything else stays perfectly static, sharp and unchanged: the pipe geometry and its gray outlines, all Chinese labels 管道 水流 阀门, the white background and every color. Locked camera, flat vector educational animation, no camera movement, no distortion, no new elements, no text change.",
+        "duration": 7
+      },
+      "motion": {
+        "type": "ai"
+      }
+    },
+    {
+      "id": "s02",
+      "duration_sec": 7,
+      "term": "阀门",
+      "term_def": "控制通断的开关",
+      "narration": "管道中间这个红色手轮，叫阀门。它的作用不是让水流得更快，而是能在需要的时候把这一段管道彻底关上。",
+      "caption": "阀门的作用不是加速，而是能彻底关上",
+      "annotations": [
+        {
+          "text": "手轮",
+          "x": 500,
+          "y": 220,
+          "color": "#ef4444",
+          "delay": 1.5
+        }
+      ],
+      "diagram": {
+        "prompt": "Clean flat vector Chinese science textbook diagram, pure white background #FFFFFF, vertical portrait layout. Subject: a HORIZONTAL pipe running left to right, cut-open cross-section, mostly empty gray pipe interior, with a prominent red handwheel valve mounted on top of the pipe at the center, the valve shown in a clearly CLOSED position. Style: flat vector textbook illustration, clean crisp thin outlines, no 3D, no photo texture, no gradient. Color scheme: pipe walls #6b7280, valve handwheel and stem #ef4444, background #FFFFFF. Labels: bold black Chinese labels with thin leader lines placed outside the subject: 阀门, 管道. Use bold Microsoft YaHei sans-serif. Quality: publication-ready educational schematic, high contrast, all elements crisp. Constraints: the pipe is HORIZONTAL running left to right, the valve is on TOP of the pipe, all labels fully visible and nothing cropped, subject centered in the upper two-thirds with generous empty margin at the bottom, no watermark, no English text, no pinyin, no garbled characters, no extra text beyond the two labels listed.",
+        "model": "openai/gpt-image-2",
+        "ratio": "9:16"
+      },
+      "motion": {
+        "type": "still",
+        "zoomTo": {
+          "x": 500,
+          "y": 220,
+          "scale": 1.1
+        },
+        "highlight": {
+          "x": 495,
+          "y": 215,
+          "w": 200,
+          "h": 110,
+          "label": "阀门手轮",
+          "delay": 1.2,
+          "duration": 4.5,
+          "color": "#ef4444"
+        }
+      }
+    },
+    {
+      "id": "s03",
+      "duration_sec": 6,
+      "term": "压强",
+      "term_def": "单位面积上的压力",
+      "narration": "水为什么能往前跑？因为水是被压着走的。物理学把这种单位面积上的压力，叫作压强。",
+      "caption": "水是被压着走的，这叫压强",
+      "diagram": {
+        "prompt": "Clean flat vector Chinese science textbook diagram, pure white background #FFFFFF, vertical portrait layout. Subject: a HORIZONTAL pipe running left to right, cut-open cross-section, filled with blue water, with a large red arrow at the LEFT end pointing rightward INTO the pipe to show pressure pushing the water in, and a smaller blue arrow inside showing the water moving right. Style: flat vector textbook illustration, clean crisp thin outlines, no 3D, no photo texture, no gradient. Color scheme: water #2563eb, pipe walls #6b7280, pressure arrow #ef4444, background #FFFFFF. Labels: bold black Chinese labels with thin leader lines placed outside the subject: 压强, 水流. Use bold Microsoft YaHei sans-serif. Quality: publication-ready educational schematic, high contrast, all elements crisp. Constraints: the pipe is HORIZONTAL running left to right, all labels fully visible and nothing cropped, subject centered in the upper two-thirds with generous empty margin at the bottom, no watermark, no English text, no pinyin, no garbled characters, no extra text beyond the two labels listed.",
+        "model": "openai/gpt-image-2",
+        "ratio": "9:16"
+      },
+      "motion": {
+        "type": "still",
+        "zoomTo": {
+          "x": 380,
+          "y": 500,
+          "scale": 1.1
+        },
+        "highlight": {
+          "x": 240,
+          "y": 495,
+          "w": 150,
+          "h": 120,
+          "label": "压力方向",
+          "delay": 1.5,
+          "duration": 3.5,
+          "color": "#ef4444"
+        }
+      }
+    }
+  ]
+}

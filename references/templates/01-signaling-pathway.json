@@ -1,0 +1,51 @@
+{
+  "id": "signaling-pathway",
+  "name": "信号通路/分子机制图",
+  "keywords": ["信号通路", "pathway", "机制图", "mechanism", "cascade", "磷酸化", "信号转导", "signaling", "级联", "调控网络"],
+  "trigger_phrases": ["信号通路", "机制图", "pathway diagram", "signaling cascade", "分子机制", "调控通路"],
+  "prompt_template": {
+    "type": "scientific mechanism diagram",
+    "subject": "{pathway_description}",
+    "layout": "top-to-bottom vertical cascade with membrane-top and nucleus-bottom",
+    "style": "flat vector illustration with labeled nodes and directional arrows",
+    "color_scheme": "activation green #10b981, inhibition red #ef4444, membrane proteins blue #3b82f6",
+    "labels": "protein names in bold Arial, phosphorylation marked with red circled P",
+    "quality": "4K, publication-ready, Nature/Cell journal style"
+  },
+  "defaults": {
+    "layout": "top-to-bottom vertical cascade",
+    "style": "flat vector illustration",
+    "color_scheme": "activation #10b981 / inhibition #ef4444",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "academic": {
+      "description": "Nature/Cell 期刊风格，扁平矢量，白底",
+      "overrides": { "style": "flat vector illustration on white background", "quality": "4K, Nature journal style" }
+    },
+    "textbook": {
+      "description": "教材风格，柔和配色，带注释框",
+      "overrides": { "style": "textbook illustration with annotation callout boxes", "color_scheme": "pastel palette with distinct hues per protein family" }
+    },
+    "infographic": {
+      "description": "科普信息图风格，图标化",
+      "overrides": { "style": "infographic with icon-based proteins and simplified shapes", "color_scheme": "vibrant educational palette" }
+    },
+    "3d-render": {
+      "description": "3D 渲染风格，蛋白质立体感",
+      "overrides": { "style": "3D rendered protein structures with depth and soft shadows", "quality": "4K, cinematic 3D render" }
+    }
+  },
+  "category_tips": {
+    "biology": "蛋白质名用标准基因符号（ERK1/2, MAPK, MEK）；激活用实线箭头，抑制用 T 型虚线；磷酸化用红色圆圈 P 标记；跨膜蛋白嵌入脂双层示意",
+    "medicine": "疾病相关突变位点用星号标注；药物靶点用虚线框圈出；临床意义用脚注说明",
+    "chemistry": "小分子配体用化学结构式表示；结合位点用口袋图示；Kd/Ki 值标在箭头上"
+  },
+  "examples": [
+    "Scientific signaling pathway diagram, MAPK-ERK cascade, top-to-bottom vertical layout: receptor tyrosine kinase at top embedded in lipid bilayer (blue #3b82f6), RAS-GTP node, RAF-MEK-ERK sequential phosphorylation marked with red circled P, nuclear translocation arrow into nucleus at bottom showing gene transcription activation. Activation arrows solid green #10b981, inhibition arrows T-bar dashed red #ef4444. Protein names in bold Arial. White background. 4K, Nature journal publication style, flat vector illustration.",
+    "Apoptosis signaling pathway mechanism diagram, intrinsic and extrinsic pathways converging on caspase-3 activation. Extrinsic: death receptor Fas with FADD and caspase-8. Intrinsic: Bcl-2 family, mitochondrial cytochrome c release, apoptosome with caspase-9. Solid green arrows for activation, T-bar dashed red for inhibition. Mitochondria drawn as oval with inner membrane folds. White background, labeled nodes, 4K, textbook illustration style with annotation callout boxes.",
+    "PI3K-AKT-mTOR signaling cascade infographic, horizontal left-to-right flow, growth factor receptor at left, PI3K converts PIP2 to PIP3, AKT phosphorylation marked, mTORC1 complex at right regulating protein synthesis. Icon-based proteins, vibrant educational color palette, bilingual labels 磷酸化 (Phosphorylation). 4K resolution."
+  ],
+  "accuracy_tips": "对照 KEGG/UniProt 验证蛋白质名和相互作用；激活用实线绿色箭头，抑制用 T 型虚线红色；磷酸化位点标红色圆圈 P；跨膜蛋白必须嵌入脂双层；不可虚构蛋白质相互作用或通路分支；方向必须明确（top-to-bottom 或 left-to-right）。",
+  "supports_image_reference": true
+}

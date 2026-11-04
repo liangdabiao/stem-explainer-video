@@ -1,0 +1,53 @@
+{
+  "id": "architecture-diagram",
+  "name": "系统/算法架构图",
+  "keywords": ["架构图", "算法架构", "神经网络", "architecture", "system architecture", "pipeline", "深度学习", "系统框图", "neural network", "框架图", "transformer", "cnn", "rnn", "llm", "大模型", "model", "算法", "algorithm", "flow chart", "数据流", "软件架构"],
+  "trigger_phrases": ["架构图", "算法架构", "系统框图", "neural network", "pipeline", "深度学习架构"],
+  "prompt_template": {
+    "type": "system/algorithm architecture diagram",
+    "subject": "{system_topic}",
+    "layout": "modular block diagram with data flow arrows and labeled components",
+    "style": "clean architecture diagram with rectangular blocks and directional arrows",
+    "color_scheme": "input/output in gray #6b7280, processing modules in blue #2563eb, trainable parameters in orange #f59e0b, loss in red #ef4444",
+    "labels": "module names in bold, tensor shapes in italic, layer types in regular, hyperparameters in small font",
+    "quality": "4K, ML paper-grade architecture diagram"
+  },
+  "defaults": {
+    "layout": "modular block diagram with data flow",
+    "style": "clean architecture diagram with rectangular blocks",
+    "quality": "4K ML paper-grade"
+  },
+  "variants": {
+    "neural-network": {
+      "description": "神经网络架构风格",
+      "overrides": { "layout": "neural network layers with input, hidden, output, tensor shapes labeled" }
+    },
+    "pipeline": {
+      "description": "数据流水线风格",
+      "overrides": { "layout": "data processing pipeline with input data, transformation stages, output" }
+    },
+    "microservice": {
+      "description": "微服务架构风格",
+      "overrides": { "layout": "microservice architecture with services as boxes, API gateway, databases, message queues" }
+    },
+    "transformer": {
+      "description": "Transformer 架构风格",
+      "overrides": { "style": "Transformer architecture with multi-head attention, feed-forward, layer norm, residual connections" }
+    }
+  },
+  "category_tips": {
+    "biology": "细胞信号网络标组分和反馈；基因调控网络标转录因子；代谢网络标通量",
+    "medicine": "医学影像处理 pipeline；临床决策支持系统；电子病历架构",
+    "chemistry": "分子动力学流程；分子对接 pipeline；高通量筛选流程",
+    "physics": "探测器读出电子学；数据采集系统；实验控制系统",
+    "engineering": "嵌入式系统；通信协议栈；实时控制系统",
+    "math": "算法流程图；优化算法迭代；数值模拟流程"
+  },
+  "examples": [
+    "Transformer architecture diagram, encoder-decoder structure. Input embeddings on left, positional encoding added. Encoder stack: N=6 layers each with multi-head attention, add & norm, feed-forward, add & norm. Decoder stack: masked multi-head attention, cross-attention with encoder output, feed-forward. Linear + softmax output. Residual connections shown as curved arrows. Tensor shapes labeled: (batch, seq_len, d_model). 4K, ML paper style.",
+    "CNN image classification pipeline. Input image (224, 224, 3). ResNet-50 backbone with conv blocks, batch norm, ReLU, residual connections. Global average pooling. Fully connected layer 1000-d. Softmax output. Each conv block labeled with output shape. Skip connections as curved arrows. Blue #2563eb for conv blocks, orange #f59e0b for FC. 4K.",
+    "Microservice architecture for e-commerce. API Gateway at top. Services: User, Product, Order, Payment, Inventory. Each as box. Databases below: UserDB, ProductDB, OrderDB. Message queue for async events. Load balancer at top. Caching layer Redis. Service communication arrows (REST/gRPC). 4K, software architecture style."
+  ],
+  "accuracy_tips": "模块名和层级名标准化（Conv2D, ReLU, BatchNorm）；张量形状标注准确；数据流方向清晰（输入→处理→输出）；不虚构组件；残差连接用弧形箭头；超参数标注（hidden_dim, num_heads, dropout）；符合主流框架命名。",
+  "supports_image_reference": false
+}

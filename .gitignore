@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.last_generate.json
+
+# 工作目录产物（跑流水线时生成）
+work/
+out/
+assets/
+storyboard.json
+
+# Remotion 工程
+templates/remotion-project/node_modules/
+templates/remotion-project/out/
+templates/remotion-project/build/
+templates/remotion-project/public/audio/narration/*.mp3
+templates/remotion-project/public/assets/videos/*.mp4
+templates/remotion-project/public/assets/diagrams/*.png
+
+# 保留占位文件
+!templates/remotion-project/public/audio/narration/.gitkeep
+!templates/remotion-project/public/assets/videos/.gitkeep
+!templates/remotion-project/public/assets/diagrams/.gitkeep
+
+# 系统
+.DS_Store
+Thumbs.db

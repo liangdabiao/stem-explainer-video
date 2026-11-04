@@ -1,0 +1,53 @@
+{
+  "id": "cyclic-flow",
+  "name": "循环流程图",
+  "keywords": ["循环流程", "cycle", "cyclic", "水循环", "碳循环", "细胞周期", "循环图", "krebs", "calvin", "nitrogen cycle"],
+  "trigger_phrases": ["循环流程", "cycle diagram", "水循环", "碳循环", "细胞周期", "循环图", "cyclic flow"],
+  "prompt_template": {
+    "type": "cyclic process diagram",
+    "subject": "{cycle_topic}",
+    "layout": "circular flow with arrows forming a closed loop",
+    "style": "clean circular diagram with stage nodes and directional arrows",
+    "color_scheme": "circular gradient or stage-specific hues, arrows in dark gray #374151",
+    "labels": "stage names in bold, process descriptions in regular, phase durations in italic",
+    "quality": "4K, publication-ready cyclic diagram"
+  },
+  "defaults": {
+    "layout": "circular closed loop",
+    "style": "clean circular diagram",
+    "quality": "4K publication-ready"
+  },
+  "variants": {
+    "circular": {
+      "description": "圆形循环风格，节点环绕",
+      "overrides": { "layout": "circular flow with 4-8 stage nodes arranged on a circle, arrows clockwise" }
+    },
+    "arrow-loop": {
+      "description": "箭头闭环风格，流程感",
+      "overrides": { "layout": "closed loop with curved arrows and stage boxes along the loop" }
+    },
+    "concentric": {
+      "description": "同心循环风格，多层",
+      "overrides": { "layout": "concentric cycles showing multiple interconnected loops" }
+    },
+    "infographic": {
+      "description": "信息图风格，图标化",
+      "overrides": { "style": "infographic with icon-based stages and illustrated background context" }
+    }
+  },
+  "category_tips": {
+    "biology": "细胞周期标 G1/S/G2/M 时长；Krebs 标产物和酶；碳循环标储库和通量",
+    "medicine": "心脏循环标收缩/舒张；凝血级联标因子；药物代谢标 ADME",
+    "chemistry": "化学循环标反应条件和催化剂；能量循环标 ATP/ADP；氧化还原标电子转移",
+    "physics": "热力学循环标 P-V 图；卡诺循环标等温/绝热；电磁循环标场方向",
+    "engineering": "控制循环标反馈回路；制冷循环标四组件；燃料电池标电极反应",
+    "math": "迭代算法标收敛条件；递归标基例/归纳；马尔可夫链标转移概率"
+  },
+  "examples": [
+    "Water cycle diagram, circular flow with 4 stages clockwise: (1) Evaporation 蒸发 from ocean with sun icon, (2) Condensation 凝结 into clouds, (3) Precipitation 降水 as rain/snow, (4) Collection 汇集 into rivers and groundwater returning to ocean. Stage nodes on circle, curved arrows between them. Blue palette #3b82f6 to #06b6d4. Illustrated background with sky, mountains, ocean. 4K, education style.",
+    "Cell cycle circular diagram, 4 phases: G1 (Gap 1, 10h), S (Synthesis, 9h), G2 (Gap 2, 4h), M (Mitosis, 1h). Phase nodes on circle, arrows clockwise. G1 green #10b981, S blue #3b82f6, G2 yellow #eab308, M red #ef4444. Checkpoint markers (G1/S, G2/M, spindle). Phase durations italic. 4K, textbook style.",
+    "Carbon cycle infographic, interconnected loops showing: atmosphere CO2, photosynthesis to plants, respiration back, decomposition to soil/fossil fuels, combustion back to atmosphere, ocean absorption. Icon-based stages with arrows showing flux values (GtC/yr). Concentric layout with atmosphere at center. 4K, publication-ready."
+  ],
+  "accuracy_tips": "循环方向正确（顺时针/逆时针）；阶段顺序符合实际；通量/时长标注准确；循环闭环无断口；阶段数 4-8 个为宜；中英文术语对照；不虚构循环过程或通量数据。",
+  "supports_image_reference": false
+}

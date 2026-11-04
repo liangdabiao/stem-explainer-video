@@ -1,0 +1,52 @@
+{
+  "id": "concept-infographic",
+  "name": "概念教育信息图",
+  "keywords": ["概念图", "教育信息图", "知识图", "concept map", "infographic", "知识体系", "科普图", "概念可视化", "educational infographic"],
+  "trigger_phrases": ["概念图", "教育信息图", "concept infographic", "知识可视化", "科普图", "concept map"],
+  "prompt_template": {
+    "type": "concept educational infographic",
+    "subject": "{concept_topic}",
+    "layout": "hub-and-spoke or bento grid with central concept and supporting modules",
+    "style": "engaging educational infographic with icons, analogies, and narrative",
+    "color_scheme": "cheerful educational palette with 3-5 distinct hues",
+    "labels": "concept name in bold, definitions in regular weight, analogies in italic",
+    "quality": "4K, education-grade infographic"
+  },
+  "defaults": {
+    "layout": "hub-and-spoke with central concept",
+    "style": "engaging educational infographic",
+    "quality": "4K education-grade"
+  },
+  "variants": {
+    "k12": {
+      "description": "K-12 少儿风格，活泼卡通",
+      "overrides": { "style": "cartoon illustration for K-12 students with friendly characters and playful icons", "color_scheme": "bright primary colors red/yellow/blue" }
+    },
+    "university": {
+      "description": "大学教材风格，严谨清晰",
+      "overrides": { "style": "university textbook infographic with precise terminology and clean layout", "color_scheme": "muted academic palette" }
+    },
+    "popular-science": {
+      "description": "科普杂志风格，视觉冲击",
+      "overrides": { "style": "popular science magazine infographic with dramatic visuals and storytelling" }
+    },
+    "icon-based": {
+      "description": "图标驱动风格，极简",
+      "overrides": { "style": "minimalist icon-based infographic with line icons and short labels" }
+    }
+  },
+  "category_tips": {
+    "biology": "用类比解释抽象概念（如细胞=工厂）；生命周期用循环图；分类用树状图",
+    "chemistry": "用积木比喻原子和分子；反应用前后对比；元素用周期表色块",
+    "physics": "用日常现象解释原理；矢量用箭头；能量用流动条",
+    "math": "用几何图形解释公式；用数轴解释运算；用面积解释积分",
+    "engineering": "用爆炸图展示结构；用流程图展示工作原理；用对比图展示优化"
+  },
+  "examples": [
+    "Concept educational infographic on photosynthesis, hub-and-spoke layout. Central hub: 光合作用 (Photosynthesis) with leaf icon. 4 spokes: (1) Light reaction 光反应 with sun icon and thylakoid diagram, (2) Calvin cycle 卡尔文循环 with CO2 arrow and glucose molecule, (3) Chlorophyll 叶绿素 with absorption spectrum, (4) Importance 生态意义 with O2 output. Cheerful palette green #22c55e, yellow #eab308, blue #3b82f6. Concept names bold, definitions regular, analogies italic. 4K, K-12 education style.",
+    "University-level concept infographic on neural networks, bento grid layout. Central module: artificial neuron diagram with weights and activation function. Supporting modules: input layer, hidden layers, output layer, backpropagation flow, loss function curve. Muted academic palette blue #1e40af, gray #6b7280. Precise terminology in bold. 4K, university textbook style.",
+    "Popular science infographic on black holes, dramatic visual layout. Hero visual: black hole with accretion disk. Supporting modules: event horizon explanation, gravitational lensing effect, Hawking radiation concept, types of black holes comparison. Storytelling narrative flow. Deep space palette black, purple #7c3aed, orange #f97316. 4K, magazine-grade."
+  ],
+  "accuracy_tips": "概念定义准确无歧义；类比恰当不误导；术语标准化；图标与概念语义一致；中英文术语对照准确；不简化到失真；适合目标受众认知水平。",
+  "supports_image_reference": false
+}
