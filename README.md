@@ -1,17 +1,18 @@
 # stem-explainer-video
 
-> 用 AI 做**结构准确**的 STEM 科普视频。
+> 用 AI 做**结构准确**的 STEM 科普视频。 适合Vibe知识大赏和老师课件制作短视频。
 
-给一个科学原理，产出一条**图准、字对、声音清楚**的讲解视频。
+给一个科学原理，产出一条**图准、字对、声音清楚**的讲解视频。 记住！ 这是严肃严格的科学作图和动画！
 
  
 **看效果**：[`examples/heart-ai/heart-ai-route.mp4`](./examples/heart-ai/heart-ai-route.mp4)
 （28 秒竖屏成片，3 拍里只有 1 拍用了 AI 视频）
 
-![](./examples/heart-ai/preview-late.png)
+ 
 
-B站视频： https://www.bilibili.com/video/BV1qfxS6TEev/?vd_source=86926e418c83af75f6850b5546388a79
+B站视频： 
 
+https://www.bilibili.com/video/BV1mWxX6ZEHX/?vd_source=86926e418c83af75f6850b5546388a79
 
 ---
 
